@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입 폼</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- div 태그는 반드시 body 태그 안에 존재해야한다-->
+    <div>
+        <h1>회원가입폼</h1>
+        <label >고객명 : </label>
+        <input type="text" name="clientName">
+        <br><br>
+        <label>전화번호 : </label>
+        <input type="tel" name="clientPhone">
+        <br><br>
+        <label>피자선택 : </label>
+        <select name="pizza">
+            <option>피자를 입력하세요</option>
+        </select>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <label></label>
+            <input type="radio" name="size" value ="Small">Small
+            <br><br>
+            <label></label>
+            <input type="radio" name="size" value="Medium">Medium
+            <br><br>
+            <label></label>
+            <input type="radio" name="size" value="Large">Large
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <label></label>
+            <input type="checkbox" name="topping" value="베이컨">베이컨
+            <br><br>
+            <label></label>
+            <input type="checkbox" name="topping" value="치즈">치즈
+            <br><br>
+            <label></label>
+            <input type="checkbox" name="topping" value="양파">양파
+            <br><br>
+            <label></label>
+            <input type="checkbox" name="topping" value="버섯">버섯
+            <br><br>
+        </fieldset>
+        <br>
+        <label>희망배송시간</label>
+        <input type="time" name="wishTime">
+        <br><br><br><br>
+        <input type="submit" value="주문하기">
+    </div>
+</body>
+</html>

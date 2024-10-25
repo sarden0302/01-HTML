@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자 주문하기</title>
+    <style>
+      img {
+        width: 50%;
+      }
+
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>피자주문하기</h1>
+      <img src="pizza.png" />
+      <br />
+      <!-- 피자 크기 선택 -->
+      <label
+        >피자 크기 : <input type="radio" name="사이즈" />작은 사이즈
+        <input type="radio" name="사이즈" />중간 사이즈(+10,000)
+        <input type="radio" name="사이즈" />큰 사이즈(+20,000)
+      </label>
+      <br />
+      <br />
+      <br />
+      <label
+        >토핑 추가 : <input type="checkbox" name="토핑" />페퍼로니
+        <input type="checkbox" name="토핑" />버섯
+        <input type="checkbox" name="토핑" />양파
+        <input type="checkbox" name="토핑" />올리브
+        <input type="checkbox" name="토핑" />추가 치즈
+        <input type="checkbox" name="토핑" />선택 안함
+      </label>
+      <br />
+      <small
+        >토핑 추가는 최대 1회만 가능하며, 한 번 선택할 경우 취소 할 수 없으므로
+        신중히 선택해주시길 바랍니다.</small
+      >
+      <br /><br />
+      <label
+        >피자 수량 :
+        <input type="number" min="1" placeholder="주문 수량 입력" />
+      </label>
+      <br />
+      <label
+        >전화번호
+        <input type="tel" placeholder="예: 010-1234-5678" />
+      </label>
+      <br />
+      <label
+        >추가 요청 사항
+        <input type="text" placeholder="예: 조심히 천천히 배달해주세요." />
+      </label>
+      <br />
+      <input type="submit" value="주문하기" />
+      <input type="reset" value="처음부터 다시 작성하기" />
+    </div>
+  </body>
+</html>

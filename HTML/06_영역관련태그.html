@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>block 형식</h3>
+    <!--
+        - 화면(공간)을 수직 분할 (세로 화면을 가로로 잘라서 층을 나누는 행위)
+        - 가로 한 줄 전체를 차지하기 때문에 </ 태그를 닫는 순간 enter 줄바꿈 이루어짐
+        - width, height 와 같은 크기 지정 속성 사용 가능 
+        
+        - block 형식의 태그(태그가 닫히면 자동 줄 바꿈)
+        h1 ~ h6 (제목), p / pre (문단), hr(수평선), div(영역), 시맨틱 태그(div 태그에 이름을 넣는 태그)
+    -->
+    <h3>inline 형식</h3>
+    <!-- 
+        - 화면을 수평 분활 (가로 화면을 세로로 잘라서 열을 나누는 행위)
+        - 가로에서 공간 분활
+        - width, height와 같이 사용 불가
+        
+        - inline 형식의 태그
+        b(굵게), strong(굵게), i(기울이기), mark(글배경 색칠하기), span(영역 분할)
+    -->
+
+    <h3>크기 지정 가능 여부 차이점</h3>
+    <ul>
+        <li>block: 크기 지정 가능</li>
+        <li>inline: 크기 지정 불가능</li>
+    </ul>
+    <h3>inline - block</h3>
+    <!-- 
+        - 두 가지 특징을 가진 형식
+        1. inline의 특징 수평 분할 (세로로 분할)
+        2.block의 특징 크기 지정 가능
+        ex) 대표적인 태그 : img 태그, iframe 태그
+
+        *iframe 태그 
+        - 웹 문서(html) 내부에 또 다른 웹 문서를 추가하는 태그
+    -->
+    <iframe src = "06_10월24일실습문제.html" frameborder="0" width="300px" height = "300px">
+    </iframe>
+
+    <iframe src ="https://kh-academy.co.kr"  width="500px" height ="500px">
+
+    </iframe>
+
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/Tei1auiBrDY" 
+        title="[#모았동물농장] 심장에 해로운 꼬물이들🐾 모음집 2탄💕 다 같이 모여 있으면 더 더 더 귀여운 아기 강아지🐶들 모음집 #TV동물농장 #AnimalFarm #SBSstory" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/i1_OGD9RmPk?si=c1quS4X8ueAbzaYp" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <a href="https://www.naver.com">네이버로 이동하기</a>
+    <!-- 
+        네이버로 이동하는 링크가 생성
+
+        a 태그는 특정 주소만 이동이 가능한 것이 아니라 개발자가 만든 문서파일로 이동 가능함
+    -->
+    <!-- Example-->
+     <a href="01_글자관련태그.html">글자관련 태그로 이동하기</a>
+
+     <h3>a 태그의 속성</h3>
+     <!-- 
+        - href(HyperText Reference) : 연결할 주소를 지정하는 속성
+        - target = "_blank" : 새 탭에서 열기
+     -->
+
+     <ol>
+        <li><a href="01_글자관련태그.html" target="_blank">글자 관련 태그로 이동하기</a></li>
+        <li><a href="02_자동완성태그.html" target="_blank">자동완성 태그 이동하기</a></li>
+        <li><a href="03_목록관련태그.html">목록관련 태그 이동하기</a></li>
+     </ol>
+</body>
+</html>
