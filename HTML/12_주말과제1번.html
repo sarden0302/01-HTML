@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div>
+            <fieldset>
+                <legend>납품자 정보</legend>
+                <ol>
+                    <li>
+                        <label>납품자명 : 
+                            <input type="text" name="name"/>
+                        </label>
+                        <br><br>
+                    </li>
+                    <li>
+                        <label>email : 
+                            <input type="email" name="email" placeholder="answer@naver.com"/>
+                        </label>
+                        <br><br>
+                    </li>
+                    <li>
+                        <label>홈페이지 : 
+                            <input type="text" name="homepage" value="http://"/>
+                        </label>
+                        <br><br>
+                    </li>
+                    <li>
+                        <label>지역 : 
+                            <select name="location">
+                                <option>서울</option>
+                                <option selected>부산</option>
+                                <option>대구</option>
+                                <option>인천</option>
+                                <option>광주</option>
+                                <option>경기도</option>
+                                <option>강원도</option>
+                            </select>
+                        </label>
+                    </li>         
+                </ol>
+                <br>
+            </fieldset>
+            <form action="12_주말과제1번결과.html">
+                <fieldset>
+                    <legend>납품 정보</legend>
+                    <label>
+                        <ul>
+                            <li>상품명 : 
+                                <label>
+                                    <input type="text" name="productName">
+                                </label>
+                                <br><br>
+                            </li>
+                            <li>납품수량 :
+                                <label>
+                                    <input type="number" name="amount" 
+                                    placeholder="최소 100" min="100">
+                                </label>
+                                <br><br>
+                            </li>
+                            <li>납품등급 : 
+                                <label>
+                                    <input type="range" name="grade" min="1" max="5">
+                                </label>
+                                <br><br>
+                            </li>
+                            <li>기타사항 : 
+                                <label>
+                                    <textarea name="etc" rows="5" cols="20"></textarea>
+                                </label>
+                                <br><br>
+                            </li>
+                            <li>설명을 위한 텍스트:
+                                <label>
+                                    <input type="text" name="testText" />
+                                </label>
+                                <br><br>
+
+                            </li>
+                        </ul>
+                    </label>
+                </fieldset>
+                <br>
+                <button>전송하기</button>
+            </form>     
+        </div>
+    </body>
+    </html>
+</body>
+</html>
