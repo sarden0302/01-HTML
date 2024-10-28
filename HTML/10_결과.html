@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 제출 결과 페이지</title>
+    
+</head>
+<body>
+    <!-- 
+        입력 양식을 작성하고 작성된 name을 보내는 공간   
+        
+        action : input 안에 작성한 내용을 전달할 위치 지정
+        name   : 개발자가 Client가 작성한 내용의 이름을 지정하는 속성 
+                ex) <input type="text" name="유저-이름" />
+    -->
+    <h1>form 태그로 전달받은 결과물 눈으로 확인하는 결과 페이지</h1>
+    <h3>입력된 사용자 이름 : <span id = "이름-결과"></span></h3>
+    <hr>
+    <h2>두번째 form 태그 안에 로그인 버튼을 누르면 보입니다.</h2>
+    <h3>입력된 사용자 아이디 : <span id="아이디-결과"></span></h3>
+    <h3>입력된 사용자 비밀번호 : <span id="비밀번호-결과"></span></h3>
+
+    <script>
+        /*
+            script 태그는 주로 
+                1. head 태그 안에 작성
+                2. </body> 이후 몰아서 작성
+            - script는 java 언어로 작성된다.
+            - html과 script 서로 다른 언어가 서로 소통하기 위해 규칙을 설정
+              : const 새로운 언어명 설정과 같은 방식으로 설정
+        */
+        const 데이터전달하기 = new URL(location.href).searchParams;
+       /* 
+            param은 최초 1회만 작성
+            new URL(location.href)
+                - location = 현재 지역;
+                - href     = 현재 위치 주소
+            .searchParams
+                - 데이터 가져오기
+        */
+
+        // 1. 10_입력태그 form.html 파일에서 유저-이름으로 작성된 값 가져오기.
+        const 이름결과 = document.getElementById("이름-결과");
+        이름결과.innerText = 데이터전달하기.get("유저-이름");
+
+        // 2. 10_입력태그 form.html 파일에서 아이디, 패스워드 작성된 값 가져오기.
+
+        //↓ html 아이디 값과 script에 작성한 아이디-결과가 동일한 의미를 가지고 있다.
+        const 아이디결과 = document.getElementById("아이디-결과");
+        //↓ 10_입력태그 form.html 에서 사용자가 작성한 아이디 작성 값을 가져와서 아이디결과 const에 가져온 것.
+        아이디결과.innerText = 데이터전달하기.get("아이디작성");
+
+        const 비밀번호결과 = document.getElementById("비밀번호-결과");
+        비밀번호결과.innerText = 데이터전달하기.get("비밀번호작성");
+
+        //비밀번호 결과를 위 아이디 결과를 활
+
+    </script>
+</body>
+</html>
