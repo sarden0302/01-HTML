@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 2 활용하기</title>
+    <style>
+        .num-ul {
+            /* 기본 리스트 스타일 제거*/
+            list-style-type: none;
+        }
+
+        .num-li {
+            padding : 15px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            font-size : 18px;
+            margin : 1%;
+            /* 
+                margin : <br> 태그 대신 상 하 좌 우 여백 설정
+                
+            */
+        }
+
+        .num-li:hover {
+            background-color: lightcoral;
+            color : white;
+            /*
+                transform : 
+                translateX -> x축 이동
+                translateY -> y축 이동
+                translate  -> (x축, y축);
+                
+            */
+            transform : translate(20px, 0px);
+        }
+
+        .alp-ul {
+            list-style-type: none;
+        }
+
+        .alp-li {
+            padding : 20px;
+            margin : 10px;
+            background-color: #ddd;
+            border-radius: 8px;
+            font-size : 20px;
+            /*hover로 변경되는 속도를 조정*/
+            transition : transform 0.3s;
+        }
+
+        .alp-li:hover {
+            background-color: black;
+            color : white;
+            transform : translate(0, -15px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hover 효과가 있는 리스트</h1>
+        <ul class="num-ul">
+            <li class="num-li">리스트 항목 1</li>
+            <li class="num-li">리스트 항목 2</li>
+            <li class="num-li">리스트 항목 3</li>
+            <li class="num-li">리스트 항목 4</li>
+            <li class="num-li">리스트 항목 5</li>
+        </ul>
+
+        <ul class="alp-ul">
+            <li class="alp-li">리스트 항목 A</li>
+            <li class="alp-li">리스트 항목 B</li>
+            <li class="alp-li">리스트 항목 C</li>
+            <li class="alp-li">리스트 항목 D</li>
+            <li class="alp-li">리스트 항목 E</li>
+        </ul>
+        <!-- 
+            1) 리스트 항목 1
+
+            2) 리스트 항목 2
+            3) 리스트 항목 3
+            4) 리스트 항목 4
+            5) 리스트 항목 5
+        -->
+    </div>
+</body>
+</html>

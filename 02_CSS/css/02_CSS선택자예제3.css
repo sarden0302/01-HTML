@@ -1,0 +1,43 @@
+/*
+    [단축키]
+    shift + tab :   tab으로 띄어쓰기를 진행한 주석의 띄어쓰기 없애기
+    
+*/
+.banner-img {
+    width : 100%;
+}
+
+.sandwich-info {
+    background-color: #fff;
+    border : 1px solid #ddd;
+    border-radius: 5px;
+    padding : 20px;
+}
+
+.ingred{
+    list-style-type: none;
+}
+
+/* .ingred class의 ul 내 li */
+.ingred li {
+    background-color: #ddd;
+    margin : 5px;
+    padding : 10px;
+    border-radius: 3px;
+}
+
+.ingred li:hover {
+    background-color: aliceblue;
+}
+
+.make li{
+    font-size : 20px;
+    margin : 20px;
+    
+}
+
+.make li:hover {
+    background-color: coral;
+    color : white;
+    padding : 20px;
+}

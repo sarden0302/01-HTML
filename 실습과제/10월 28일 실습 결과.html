@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            border : 1px solid black;
+            border-radius: 10px;
+        }
+        h1 {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>맛있어 치킨가게 회원가입 완료</h1>
+        <h3>이름 : <span id="name"></span></h3>
+        <br>
+        <h3>아이디 : <span id="id"></span></h3>
+        <br>
+        <h3>비밀번호 : <span id="pw"></span></h3>
+        <br>
+        <h3>이메일 : <span id="email"></span></h3>
+        <br>
+        <h3>좋아하는 치킨 : <span id="fc"></span></h3>
+        <br>
+    </div>
+    
+    <script>
+        const params = new URL(location.href).searchParams;
+
+        const nameResult = document.getElementById("name");
+        const idResult = document.getElementById("id");
+        const pwResult = document.getElementById("pw");
+        const emailResult = document.getElementById("email");
+        const chickenResult = document.getElementById("fc");
+
+        nameResult.innerText = params.get("user-name");
+        idResult.innerText = params.get("user-id");
+        pwResult.innerText = params.get("user-pw");
+        emailResult.innerText = params.get("user-email");
+        chickenResult.innerText = params.get("favorite-chicken");
+    </script>
+</body>
+</html>
