@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일2</title>
+    <link rel="stylesheet" href="../css/02_레이아웃스타일2.css"/>
+</head>
+<body>
+    <h1>요소의 영역(여백) 관련 스타일</h1>
+    <!-- 
+        HTML 요소는 총 4가지 영역으로 구성되어 있음
+
+        1. content : 내용
+            - 요소의 내용이 작성 되는 영역
+            (시작 태그와 종료태그 사이에 작성되는 내용을 생각하면 됌
+            요소(element) = <태그> + 내용들
+        2. padding :
+            - content와 border(테두리) 사이 공간  
+        3. border : 테두리
+            - 요소의 테두리 공간
+        4. margin : 여백, 간격
+            - 다른 요소와의 간격
+    -->
+
+    <h4>padding, margin 크기를 한 번에 지정</h4>
+    <div class="A">공간1번</div>
+    <div class="B">공간2번</div>
+    <div class="C">공간3번</div>
+    <div class="D">공간4번</div>
+
+    <hr><hr><hr><hr><hr><hr><hr>
+    <h3>padding, margin, border의 방향성</h3>
+    <!--
+        상 우 하 좌를 익히지 못했을 때 사용하는 또 다른 방법
+        또는 우, 하, 자 에다가 특정 크기 값을 주고 싶을 때 
+        ( ㅁㅁㅁ == padding, margin, border를 나타냄)
+
+        ㅁㅁㅁ-top    : 크기 = 상 크기 조정
+        ㅁㅁㅁ-bottom : 크기 = 하 크기 조정
+        ㅁㅁㅁ-left   : 크기 = 좌 크기 조정
+        ㅁㅁㅁ-right  : 크기 = 우 크기 조정    
+        
+        단, border의 속성 값은 [크기 모양 색상] 형식으로 작성
+    -->
+    
+    <h4>예제 활용하기</h4>
+    <div class="b">
+        <div class="box"> 
+
+        </div>
+    </div>
+
+    <h3>margin : auto</h3>
+    <!--
+        margin : auto 
+            - 다른 요소와의 간격을 자동으로 지정해서 가운데 정렬하게 만드는 속성 값
+            - 기본적으로 좌우 간격만 자동으로 지정
+            - 지정되는 대상은 block 형식의 요소여야함 
+              (inline, inline-block -> text-align : center 활용!)
+    -->
+
+    
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

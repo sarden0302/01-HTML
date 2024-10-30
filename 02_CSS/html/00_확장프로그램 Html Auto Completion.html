@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>확장프로그램 Html Auto Completion</title>
+    <style>
+        table {
+            width : 100%;
+            border-collapse: collapse;
+            margin-top : 20px;
+        }
+
+        /* 
+            tr th, tr td 서로 다른 태그 안에 감싸져 있는 태그들을
+            동시에 디자인 적용할 때는 , 사용
+        */
+        td {
+            background-color: #4caf50;
+            color : white;
+            padding : 10px;
+            border : 1px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Html Auto Completion</h1>
+    <table>
+        <tr>
+            <td>! + enter</td>
+            <td>기본으로 설치돼있는 자동완성 단축키</td>
+        </tr>
+        <tr>
+            <td>!!!</td>
+            <td> &lt;!DOCTYPE html&gt; <br>
+                < 모양은 &lt, >모양은 &gt
+            </td>
+            
+        </tr>
+        <tr>
+            <td>!html</td>
+            <td>link 태그 포함돼서 기본틀 생성</td>
+        </tr>
+        <tr>
+            <td>!table</td>
+            <td>table tr th tr td tr td 생성</td>
+        </tr>
+    </table>
+    <h2>w3school</h2>
+    <a href="https://www.w3schools.com">w3school로 이동하기</a><br></br>
+    <!-- 
+        특수기호를 나타내기
+        HTML 튜토리얼 밑에
+        HTML Entities ~ Emojis 사이가 모두 &숫자나 영어;
+        &#128513;
+    -->
+    &#128513;
+</body>
+</html>

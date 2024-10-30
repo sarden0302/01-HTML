@@ -1,0 +1,59 @@
+div {
+    width : 200px;
+    height : 200px;
+    border : 2px solid black;
+}
+
+.A {
+    padding : 20px; /*상하좌우 : 20px*/
+}
+
+.B {
+    padding : 20px 60px; /*상하 : 20px 좌우 : 60px*/
+}
+
+.C {
+    padding : 10px 30px 100px; /*상 좌우 하*/
+}
+
+.D {
+    padding : 10px 30px 50px 100px; /*상 우 하 좌
+                                      시계방향으로 지정
+                                    */
+}
+/* A & B 형식을 가장 많이 활용*/
+
+.b {
+    background-color: lightcoral;
+}
+.box {
+    width : 100px;
+    height : 100px;
+    background-color : aliceblue;
+
+    padding : 10px 15px 20px 5px;
+
+    padding-top : 10px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 15px;
+   
+    
+    margin : 30px 300px 100px 50px;
+
+    margin-top : 30px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 300px; 
+    
+    border-top : 5px solid red;
+    border-bottom : 3px dotted black;
+    border-left : 10px double orange;
+    border-right : 3px dashed purple;
+    /*
+        solid : 실선
+        dotted : 점선
+        double : 이중 실선
+        dashed : (-) 점선
+    */
+}

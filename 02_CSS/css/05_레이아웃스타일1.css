@@ -1,0 +1,87 @@
+body {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+.헤더 {
+    background-color: #333;
+    padding : 20px;
+    text-align: center;
+}
+
+h1 {
+    color : #ffa500;
+    font-size : 40px;
+}
+
+.메인 {
+    padding : 20px;
+}
+
+.인포메이션, .갤러리, .갤러리2 {
+    background-color: #333;
+    color : #f5f5f5;
+    border-radius: 8px;
+    padding : 20px;
+    /* 
+        입체적으로 보여주는 느낌 
+        box-shadow : A B C color;
+        - A : 왼쪽이나 오른쪽으로 효과
+            +20 : 오른쪽, -20 : 왼쪽
+          B : 위 아래 효과
+            +20 : 아래, -20 : 위
+          C : 얼만큼 뿌옇게 만들 것인지
+          color : 그림자 색상
+    
+        색상 팁 :
+            #영어로 시작 : 흰색에서 시작
+            #숫자로 시작 : 검정색에서 시작
+            rgba(0, 0, 0, 0.1 ~ 0.9) 
+                - rgba(0, 0, 0, 불투명도) = 검정색 / 0.4 = 40%
+    */
+    box-shadow : 0 2px 5px rgba(0,0,0,0.4);
+    margin-bottom : 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding : 10px 20px;
+    transition : background-color 0.3s;
+}
+
+ul li:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.이미지, .이미지2{
+    text-align: center;
+}
+
+.이미지 img, .이미지2 img {
+    width : 150px;
+    border-radius: 8px;
+    border : 2px solid #444;
+    box-shadow : 0 2px 5px rgba(0,0,0,0.4);
+    transition : width 0.7s;
+}
+
+.이미지 img:hover {
+    width: 200px;
+    height : 200px;
+}
+
+.이미지2 img:active {
+    width : 300px;
+    height : 300px;
+}
+
+.footer {
+    text-align : center;
+    padding : 20px;
+    background-color: #333;
+    color : #ffa500
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>div 안 태그 가운데 정렬</title>
+    <style>
+        .T반, .Y반 { /*T반은 가운데 정렬한다*/
+            text-align: center;
+        }
+
+        .Z반 { /*Z반은 가운데 정렬한다*/
+            text-align: center;
+        }
+
+        .T반, .Z반, .Y반 {/*T반과 Z반은 가운데 정렬한다*/
+            text-align: center;
+        }
+
+        .T반 span, .Y반 span{
+            font-size : 30px;
+            font-weight: bold;
+
+        }
+
+        .Z반 img {
+            width: 150px;
+        }
+
+        .아이들 {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <h1>div 안 span 태그 가운데 정렬</h1>
+    <div class="T반">
+        <span class="아이들">1반</span>
+        <span>2반</span>
+        <span>3반</span>
+        <span>4반</span>
+        <span>5반</span>
+    </div>
+    <hr>
+    <div class="Z반" >
+        <img src="../image/flower1.jpg">
+        <img src="../image/flower2.jpg">
+        <img src="../image/flower3.jpg">
+    </div>
+    <div class="Y반">
+        <span class="아이들">가</span>
+        <span>나</span>
+        <span>다</span>
+    </div>
+</body>
+</html>

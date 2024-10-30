@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일 1</title>
+    <link rel="stylesheet" href="../css/02_레이아웃스타일1.css" />
+</head>
+<body>
+    <h1>레이아웃 스타일1</h1>
+    <!-- 
+        사전적 의미 : 배치, 정리
+        기술적 의미 : 구성요소를 제한된 공간에 효율적으로 배치하는 것
+    -->
+    <h3>화면 배치(표시, 형식) 지정 : display 속성</h3>
+    <!--
+        display : 요소가 화면에 어떻게 보여질지 형식을 지정하는 속성
+
+        - block : 화면을 수직 분할(행을 나눔, 한 줄 다 차지)
+                - width, height 지정 가능
+                ex) h1~h6, p/pre, hr, div, 시맨틱 태그
+        - inline : 화면을 수평 분할
+                - width, height 지정 불가능
+                ex) b, strong, i, mark, span
+
+        - inline-block : 화면을 수평 분할
+                        - width, height 지정 가능
+                        ex) iframe, img 
+        - none : 요소는 존재하나 화면에는 보이지 않게 함
+        - flex : 요소의 정렬되는 방향, 요소 간의 간격을 유연하게 
+                처리하는 방식
+        - grid : 격자무늬 형식으로 화면을 쉽게 분할하는 형식
+    -->
+    <h4>block 형식의 요소를 inline 형식으로 변경</h4>
+    <div class="block 영역1">1번 영역</div>
+    <div class="block 영역2">2번 영역</div>
+    <div class="block 영역3">3번 영역</div>
+    <div class="block 영역4">4번 영역</div>
+    <div class="block 영역5 키큰애">5번 영역</div>
+</body>
+</html>
