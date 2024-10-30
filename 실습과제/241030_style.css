@@ -1,0 +1,32 @@
+.header{
+    background-color: #ffa500;
+    padding : 20px;
+    font-size : 40px;
+}
+
+.footer{
+    background-color: #ffa500;
+    padding : 20px;
+}
+
+.info, .gal {
+    border : 2px solid #dddddd;
+    border-radius : 8px;
+    box-shadow : 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.gal .image , .footer, .header{
+    text-align: center;
+
+}
+
+.gal img {
+    width : 100px;
+    border-radius: 8px;
+    margin : 4%;
+}
+
+.info li {
+    font-weight : bold;
+}
