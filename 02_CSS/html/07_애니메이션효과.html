@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 과 Transform</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Transition 과 Transform</h1>
+        <!--
+            transition : 변화를 줄 값의 시간 설정
+            transition: 속성명  전환시간  전환속도곡선
+                - 전환이 시작되기 전 지연 시간이 있음
+            ex) 5초 후 일정속도로 배경색, 3초 후 font 색상 변경
+                transition : background-color 0.5s linear
+                transition : color 0.3
+            -> css 코드 내에서 해당 코드 내에 직접적으로 작성한다
+            
+            transform  : 요소를 이동, 회전, 크기 조절, 뒤집기 등 적용
+                1) translate : translate(10px, 20px) 
+                    - 요소를 x축, y축 방향으로 이동
+                    +x축 : 오른쪽
+                    +y축 : 아래쪽
+                2) transform : rotate(45deg) 
+                    -  회전 (시계방향)
+                3) transform : scale(1.5) 
+                    - 크기 조절 : 1.5배 키우기
+                4) transform : skew(10deg, 5deg)
+                    - 가로 오른쪽으로 10도, 세로 오른쪽으로 5도 기울이기
+                ex) transform: translate(20px, 10px) scale(1.2);
+                -> 효과를 준(hover, active, visited, focus) 태그 내에 작성
+                    transition 코드 변경 원할 시 transform : transition 작성         
+        -->
+
+        <style>
+            .box {
+                width: 100px;
+                height : 100px;
+                background-color: yellowgreen;
+                /* transition의 2가지 이상의 속성 값을 변경시 , 사용 */
+                transition : background-color 0.7, transform 0.5s;
+            }
+
+            .box:hover {
+                background-color: aqua;
+                transform : rotate(45deg);
+            }
+        </style>
+
+        <h4>트랜지션과 트랜스폼</h4>
+        <div class="box"></div>
+
+        <br><br><br>
+    </div>
+</body>
+</html>

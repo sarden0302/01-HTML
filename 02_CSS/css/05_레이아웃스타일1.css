@@ -1,7 +1,23 @@
+a {
+    /* a 태그 밑줄 제거*/
+    text-decoration: none;
+    background-color: #f5f5f5;
+    color :  #333;
+    padding : 12px 24px;
+    border-radius : 8px;
+    transition : background-color 0.3s;
+}
+
+a:hover {
+    background-color: #666;
+    color : #fff;
+}
+
 body {
     background-color: #1c1c1c;
     color: #f5f5f5;
 }
+
 
 .헤더 {
     background-color: #333;
@@ -18,7 +34,16 @@ h1 {
     padding : 20px;
 }
 
+.테마 {
+    text-align : center;
+}
+/* div 안에 text-align 안됐을 때
+    display : inline-block 사용
+    * div에 작성하는 것이 아니라 a나 img와 같은 테그에 직접적 작성
+*/
+
 .인포메이션, .갤러리, .갤러리2 {
+    margin-top : 30px;
     background-color: #333;
     color : #f5f5f5;
     border-radius: 8px;

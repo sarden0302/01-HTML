@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크관련태그 - a 태그</title>
+    <style>
+        /*
+            a 태그를 꾸며줄 때 기본적으로 링크 색상과 밑줄 제거를 항시 사용
+        */
+
+        a {
+            color : orange; /*방문 전 색상 변경*/
+            text-decoration: none; /*밑줄 제거*/
+        }
+
+        a:hover {
+            color: aqua;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color : yellowgreen;
+            font-size : 25px;
+        }
+
+        a:visited {
+            color :red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>하이퍼 관련 태그 - a 태그</h1>
+        <!-- 
+            글자 색상 :
+                - 파란색 : 아직 방문 전 색상
+                    a {
+                    }
+                - 보라색 : 방문 후 색상
+                    a:visited{
+                    }
+            
+            a 태그는 사용자가 특정 행동을 했을 경우를 3가기 경우
+
+            a:hover   = 마우스를 링크 위에 올렸을 때
+                주로 text-decoration : underline
+            a:active  = 마우스를 클릭했을 때 활성화
+            a:visited = 방문 했을 때 스타일 지정
+                주로 color만 지정
+
+            button vs a태그
+            input type="submit" 태그는 제출을 위한 용도
+            a href=""           태그는 특정 주소나 링크로 이동하기
+                                위해 사용
+
+            a 스타일 태그 속성
+        -->
+        <a href="">하이퍼링크</a>
+
+    </div>
+</body>
+</html>
