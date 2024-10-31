@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float를 이용한 스타일</title>
+    <style>
+        .container {
+            width : 600px;
+            margin: 0 auto;
+            border : 20px solid #ddd;
+            padding : 20px;
+            background-color: #f9f9f9f9;
+            box-sizing: border-box;
+        }
+
+        .이미지박스 {
+            width: 100px;
+            height : 100px;
+            float: left;
+            margin-right: 15px;
+            background-color: #ddd;
+            text-align: center;
+            color : white;
+            font-size : 20px;
+            /*
+                display : block으로 되어있는 형식들을
+                          inline 형식으로 가로로 모두 정렬
+                justify-content : 가로로 정렬시킨 태그들을
+                                  자동너비 주기를 넣어줘서
+                                  일정한 주기를 주는 것
+                text-align : 글자 정렬
+                             - 가로로 정렬
+                align-items : 글자로 작성된 문장들을 정렬
+                             - 세로로 정렬
+
+            */
+            display : flex;
+            justify-content: center;
+            align-items: center; /* 세로로 정렬*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>float과 clear를 활용한 정렬 예제</h2>
+        <!-- 이미지 박스 -->
+        <div class="이미지박스">이미지</div>
+        <!-- 텍스트 박스 -->
+        
+    </div>
+</body>
+</html>

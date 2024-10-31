@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 레이아웃</title>
+    <style>
+        .container1 {
+            text-align: center;
+            background-color: lightgray;
+            padding : 20px;
+        }
+
+        .container2 {
+            /*
+                div 내 div 태그들을 inline 효과를 주기 위한 효과
+            */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item1 {
+            width : 100px;
+            height : 100px;
+            background-color: skyblue;
+            display : flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item2 {
+            width : 100px;
+            height : 100px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flex 레이아웃</h1>
+        <!-- 
+            display : flex 
+                = div 안에 작성한 태그들을 유연하게 배치할 수 있는 속성
+                 - 수평, 수직으로 정렬이 가능
+                 - ul, ol 태그에 많이 사용
+                 - flex의 경우 div(=가로 한 줄 전체 차지하는 block) 형태를 
+                   inline 형태로 바꾸는 효과가 있음
+                 - display: flex; 와 같이 자주 쓰이는 속성 존재
+
+                 1. 가로로 존재하는 태그의 여백을 설정해주는 방법
+                  1-1) justify-content:center;
+                    = flex 컨테이너 내의 자식 태그를 가로방향으로 가운데 정렬
+                  1-2) justify-content:space-around;
+                    = flex 컨테이너 내의 자식 태그들 사이에 균등한 여백을 줘 배치
+
+                2. 세로로 존재하는 태그 줄의 여백을 가운데로 설정해 주는 방법
+                    - align-items :        ;
+                                  - center = 세로 방향 가운데 정렬
+                    주로 flex-direction:row; 와 함께 세로 가운데 정렬 필요할 때 사용
+                    text  -  align  -  items
+                        가로       세로
+                
+                3. flex-wrap : wrap;
+                    - 자동 줄 정렬
+                    - 한 줄에서 있을 수 있는 태그의 너비가 넘어가면 자동으로 줄 바꿈 
+        -->
+        <!--
+            flex 와 inline의 차이
+        -->
+        <div class="FlexVsInline">
+            <table border="1px" style="border-collapse:collapse">
+                <tr>
+                    <th>특징</th>
+                    <td>요소 배치 방식</td>
+                    <td>크기 제어</td>
+                    <td>정렬 옵션</td>
+                    <td>응용 범위</td>
+                </tr>
+                <tr>
+                    <th>inline</th>
+                    <td>같은 줄에 나열되며 필요한 공간만 차지</td>
+                    <td>높이 넓이 지정 어렵다</td>
+                    <td>제한적</td>
+                    <td>text 및 링크 요소</td>
+                </tr>
+                <tr>
+                    <th>flex</th>
+                    <td>가로 세로 방향으로 유연하게 배치</td>
+                    <td>높이 넓이 지정 가능</td>
+                    <td>다양한 정렬 옵션</td>
+                    <td>전체 레이아웃 설계 주로 사용</td>
+                </tr>
+            </table>
+            <h4>inline 속성</h4>
+            <!--
+                높이나 넓이 지정 x 
+            -->
+            <style>
+                .inlineContainer {
+                    display : inline-block;
+                    padding: 10px;
+                }
+
+                .inline {
+                    display:inline-block;
+                    background-color: orange;
+                    padding:10px;
+                    align-items: center;
+                    
+                    /* text-align :center 적용 x */
+                }
+
+                .flexContainer {
+                    display : flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 10px;
+                }
+
+                .flex {
+                    padding : 10px;
+                    background-color: lightcoral;
+                }
+            </style>
+            <div class="inlineContainer">
+                <div class="inline">item 1</div>
+                <div class="inline">item 2</div>
+                <div class="inline">item 3</div>
+            </div>
+            <div class="flexContainer">
+                <div class="flex">item 1</div>
+                <div class="flex">item 2</div>
+                <div class="flex">item 3</div>
+            </div>
+        </div>
+        <h3>text-align 과 justify-content 차이</h3>
+        <div class="container1">
+            <span>안녕 클릭하기 → </span>
+            <button>클릭합시다</button>
+        </div>
+        <div class="container2">
+            <div class="item1">Item 1</div>
+            <div class="item2">Item 2</div>
+        </div>
+
+    </div>
+</body>
+</html>
