@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex wrap</title>
+    <style>
+        .container {
+            display:flex;
+            flex-wrap: wrap;
+            /* justify-content:space-속성 여백이 자동 설정
+                gap : 여백을 동일하게 지정할 수 있다
+            */
+            gap : 10px;
+            padding : 10px;
+            background-color: #ddd;
+        }
+
+        .container div {
+            padding : 20px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-wrap 활용하기</h1>
+    <!--
+        flex-wrap : wrap;
+        display : flex 은 열 방향으로 정렬된거를 풀어준다
+
+        <반응형 디자인>
+        - 화면의 가로 크기(pc vs app)에 따라 디자인 제공
+          pc       : 800 ~ 1400
+          tablet   : 500 ~ 700
+          cellphone: 300 ~ 400
+
+    -->
+    <h3>display:flex 와 flex-wrap : wrap 활용하기</h3>
+    <div class="container">
+        <div style="background-color: lightcoral;">상의</div>
+        <div style="background-color: lightblue;">하의</div>
+        <div style="background-color: lightgreen;">악세사리</div>
+        <div style="background-color: lightpink;">신발</div>
+        <div style="background-color: lightyellow;">고객센터</div>
+    </div>
+    <style>
+        .container2 {
+            display : flex;
+            flex-wrap : wrap;
+            justify-content: center;
+            gap : 15px;
+            padding : 20px;
+            background-color: #ddd;
+        }
+
+        .container2 div {
+            padding:20px;
+            width : 100px;
+            text-align: center;
+            border-radius : 5px;
+        }
+
+    </style>
+    <h3>display:flex와 flex-wrap:wrap, justify-content 활용하기</h3>
+    <div class="container2">
+        <div style="background-color: lightcoral;">상의</div>
+        <div style="background-color: lightblue;">하의</div>
+        <div style="background-color: lightgreen;">악세사리</div>
+        <div style="background-color: lightpink;">신발</div>
+        <div style="background-color: lightyellow;">고객센터</div>
+    </div>
+</body>
+</html>
