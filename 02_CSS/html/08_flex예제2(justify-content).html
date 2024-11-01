@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:flex 활용방안</title>
+    <style>
+        div {
+            padding : 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>display:flex / justify-content</h1>
+    <h3>가로로 정렬 (수평 중앙 정렬)</h3>
+    <p>display:flex + justify-content: center</p>
+    <p>display:flex = 세로로 된 div를 가로로 보기<br>
+        justify-content:center = 1열 당 가로에 있는 div를 중앙으로 정렬</p>
+    <div style="display: flex; 
+                justify-content: center;
+                background-color: #f5f5f5;">
+        <div style="background-color: lightcoral;">Item1</div>
+        <div style="background-color: lightblue;">Item2</div>
+        <div style="background-color: lightgreen;">Item3</div>
+    </div>
+    <hr>
+    <h3>요소 간격(space-between)</h3>
+    <!-- 
+        display:flex + justify-content:space-between
+        display:flex = 세로로 정렬된 요소들 가로로 정렬
+        justify-content: div(=container)와 같은 태그를 수평 방향으로 정렬
+                         간격을 조정
+            - flex-start         : 왼쪽 정렬(default)
+            - flex-center        : 모든 flex 가운데로 배치
+            - end                : 오른쪽 정렬
+            
+            * space- : 태그들의 특정적인 규칙을 제공 
+            - space-between : 첫번째와 마지막 양 끝 정렬
+                              나머지 요소들 동일한 규격으로 정렬
+            |요소1      요소2      요소3      요소4|
+            - space-around  : 각 요소 사이 & 양 끝 규격(각 요소 gap / 2)에도 
+                              동일한 규격 적용
+            |   요소1      요소2      요소3      요소4   |
+            - space-evenly  : 모든 요소 & 양 끝 동일하게 규격 적용
+            |      요소1      요소2      요소3      요소4      |
+
+    -->
+    <div style="display: flex; 
+                justify-content: space-between;
+                background-color: #f5f5f5;">
+        <div style="background-color: lightcoral;">Item1</div>
+        <div style="background-color: lightblue;">Item2</div>
+        <div style="background-color: lightgreen;">Item3</div>
+        <div style="background-color: lightyellow;">Item4</div>
+    </div>
+
+    <hr>
+    <h3>요소 간격(space-between) - 양쪽 끝에 살짝 간격을 넣어줌</h3>
+    <div style="display: flex; 
+                justify-content: space-around;
+                background-color: #f5f5f5;">
+        <div style="background-color: lightcoral;">Item1</div>
+        <div style="background-color: lightblue;">Item2</div>
+        <div style="background-color: lightgreen;">Item3</div>
+        <div style="background-color: lightyellow;">Item4</div>
+    </div>
+</body>
+</html>

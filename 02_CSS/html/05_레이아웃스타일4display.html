@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+</head>
+<body>
+    <div class="container">
+        <h1>display 속성</h1>
+        <!--
+            display 속성 HTML 요소의 배치 방식을 서정하는 중요한 css 속성
+            display 주요 값으로 
+                [block, inline, inline-block, flex, grid, inline-flex]
+            모든 tag에는 display가 각 속성에 맞게 기본설정이 되어있음
+            -> 기본 스타일의 틀을 변경하길 원할 시 css를 이용해서 변경
+            display:block = div, h1~h6, p
+                ex) h1 태그를 만들 때 
+                    -> display:block; font-weight:bold; font-size:32px;
+                    위 h1 태그처럼 모든 태그에는 각 css가 기본으로 설정
+            display:inline = span, a, strong, mark
+                ex) span 태그를 만들 때
+                    -> display: inline; font-size:16px; color:black;
+            display:inline-block = img, button, iframe
+            display:flex = flex 요소는 내부 항목들이 수평 또는 수직으로 
+                           유연하게 정렬
+
+            display:grid = 행과 열로 내부 항목 정렬
+                            - 주로 이미지나 웹툰처럼 틀과 형식으로
+                              규칙적으로 정렬이 필요할 때 사용
+                              ex) 사진 정렬
+                - grid-template-columns: 1fr 1fr; :가로의 비율(fraction)을 설정
+                                                  fr의 갯수를 통해 한 줄에 지정할
+                                                  grid 갯수를 지정할 수 있다.
+                - gap:10px; : grid 간의 규격 설정
+        -->
+
+        <div style ="display:flex">
+            <div style="background-color:lightpink; padding: 20px;">
+                Flex Item 1
+            </div>
+            <div style="background-color:lightyellow; padding: 20px;">
+                Flex Item 2
+            </div>
+            <div style="background-color:lightblue; padding: 20px;">
+                Flex Item 3
+            </div>
+        </div>
+        <br><br>
+        <div style ="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:30px;">
+            <div style="background-color:lightgreen; padding: 20px;">
+                Grid Item 1
+            </div>
+            <div style="background-color:lightblue; padding: 20px;">
+                Grid Item 2
+            </div>
+            <div style="background-color:lightpink; padding: 20px;">
+                Grid Item 3
+            </div>
+            <div style="background-color:lightblue; padding: 20px;">
+                Grid Item 4
+            </div>
+        </div>
+    </div>
+</body>
+</html>

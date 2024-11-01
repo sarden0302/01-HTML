@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 우선순위</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS 스타일 선택자 우선순위</h1>
+        <!--
+            기본적으로 css 속성은 style 태그 또는 css 파일에
+            작성된 순서(위에서부터 아래로) 해석이 진행되지만
+
+            같은 요소에 여러 css 속성이 설정되는 경우 
+            우선순위에 따라 적용
+
+            ※ 알아둬야 할 것
+            1) 동일한 우선 순위로 css 속성이 설정된 경우
+                -> 제일 마지막에 작성된 css속성이 반영
+            2) 여러 선택자를 이용해서 같은 요소를 선택하더라도
+                지정되는 css속성이 다르면 모두 반영됌
+            3) 태그와 style이 가까이 위치할 수록 우선순위가 적용
+            4) 스타일.css 파일과 <style></style> 태그 안에 작성한 css는 
+               동일한 우선순위를 가지고 있으나 가장 마지막에 작성한 것 적용
+                ex1) <link rel="stylesheet" href="스타일.css">
+                    ...
+                    <style> 
+                        css 설정
+                    <style>
+                    의 경우 <style> 설정 값이 적용
+                ex2)<style> 
+                        css 설정
+                    <style>
+                    ...
+                    <link rel="stylesheet" href="스타일.css">
+                    의 경우 <link> 설정 값이 적용
+            1순위 : !important;
+                -> 다른 스타일 태그에서 속성 변경 못하도록 잠금 설정
+            2순위 : 인라인스타일 
+                -> 태그 옆에 직접적으로 스타일 적용 시 우선 순위를 높게 줌
+                ex) <p style="font-size" : 20px;" >
+            3순위 : #id 속성
+            4순위 : .class 속성
+            5순위 : 태그이름  
+                -> h3 같이 여러가지로 적용 후 다른 하나만
+                   설정 값을 바꿀 경우를 위해 마지막 순위로 지정
+        -->
+
+        <style>
+            h3{
+                background-color: red;
+            }
+        </style>
+        <h3>안녕</h3>
+    </div>
+</body>
+</html>
