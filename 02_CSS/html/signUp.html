@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/cafe.css">
+</head>
+<body>
+     <!-- 배너 -->
+     <div class="banner">카페에 오신 것을 환영합니다. &#x2615;</div>
+     <div class="navContainer">
+         <ul class="nav">
+             <li><a href="#">HOME</a></li>
+             <li><a href="11_배너예제.html">메뉴</a></li>
+             <li><a href="#">소개</a></li>
+             <li><a href="#">연락하기</a></li>
+             <li><a href="signUp.html">회원가입하기</a></li>
+         </ul>
+         <!-- 회원가입 폼 -->
+        <div class="signup-container">
+            <h2>회원가입</h2>
+            <form action="회원가입성공.html">
+                <!-- for="id속성명" for는 label에 표기된 요소를 
+                          클릭시 해당 input으로 이동 
+                          ※사진 선택 시 자주 사용
+                -->
+                <label for="user-name">이름</label>
+                <input type="text" id="user-name" name="user-name">
+                <label for="user-email">이메일</label>
+                <input type="email" id="user-email" name="user-email">
+                <label for="user-pw">비밀번호</label>
+                <input type="password" id="user-pw" name="user-pw">
+                <label for="user-profile">프로필 사진 선택하기</label>
+                <input type="file" id="user-profile" name="user-profile">
+                <br><br><br>
+                <!-- 취미 및 특기 체크박스 
+                    checkbox : 다중 선택 가능 (name으로 같은 분류의 체크박스 묶어줌) 
+                -->
+                <label for="hobby">취미/특기</label>
+                <input type="checkbox" name="hobby">음악
+                <input type="checkbox" name="hobby">운동
+                <input type="checkbox" name="hobby">독서
+                <input type="checkbox" name="hobby">요리
+                <br><br>
+                <!-- 수신 동의 라디오 버튼 -->
+                <label for="subscription">수신동의 여부</label>
+                <input type="radio" name="subscription" id="subscription">예
+                <input type="radio" name="subscription" id="subscription">아니요
+
+                <button>가입하기</button>
+
+            </form>
+        </div>
+     </div>
+</body>
+</html>

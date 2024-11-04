@@ -1,0 +1,148 @@
+/* 
+css의 경우 대부분 하나의 css 파일에서 작업을 진행
+html 파일이나 또는 div로 묶은 css 스타일이 변경될 때마다 
+주석으로 어떤 css 스타일인지 표기를 작성해주는 것이 예의
+*/
+/*
+    수정시 주석을 활용해 기존에 저장했던 설정값 저장해둘 것
+*/
+/********** main page css **********/
+body {
+    margin : 0px;
+}
+
+.banner {
+    background-color: #884513;
+    color : white;
+    padding : 60px 0px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    margin : 0px;
+    padding: 0px;
+    list-style-type: none;
+    display : flex;
+    justify-content: space-around;
+    background-color: #3e2723;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav li a {
+    display : block;
+    color : white;
+    padding : 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition : background-color 0.3s;
+}
+
+.nav li a:hover {
+    background-color: #5d4037;
+}
+
+/* 메뉴 이외 소개 연락하기 섹션
+    섹션들의 공통 스타일을 묶어서 디자인한 다음 적용
+*/
+.content {
+    margin : 50px auto;
+    padding : 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    display : flex;
+    flex-wrap : wrap; /* 모바일이랑 pc버젼에서 보기 편하게 하기 위해*/
+    justify-content: center;
+    gap : 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding : 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-item h2 {
+    font-size: 24px;
+    margin-bottom : 10px;
+}
+
+.menu-item span {
+    font-size: 1.5em;
+    margin-right : 80px;
+}
+
+/********** signUp.html **********/
+.signup-container {
+    width : 400px;
+    margin : 50px auto;
+    background-color: #f0f0f0;
+    padding : 20px;
+    border-radius: 8px;;
+}
+
+.signup-container h2 {
+    text-align: center;
+}
+
+.signup-container label {
+    display : block;
+    font-weight: bold;
+    margin-top : 10px;
+    color : #333;
+}
+/* input에서 특정 type만 선택해서 꾸미고 싶다. */
+.signup-container input[type="text"],  
+.signup-container input[type="email"], 
+.signup-container input[type="password"]{
+    width : 80%;
+    padding : 10px;
+    margin-top : 5px;
+    margin-bottom : 15px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    font-size : 16px;
+}
+
+.signup-container input[type="checkbox"],
+.signup-container input[type="radio"] {
+    margin-right : 10px;
+    margin-bottom : 15px;
+}
+
+.signup-container button {
+    width :100%;
+    padding:10px;
+    font-size : 20px;
+    cursor : pointer;
+}
+
+/* span은 display-block을 주지 않는 한 가로세로 크기를 조절할 수 없음 
+
+    px em
+    px(pixel) 화면에서 가장 작은 단위
+    1em(em square) = 16px
+*/
+
+/* display : none;     = 위치까지 숨겨서 숨김
+                       visibility: hidden; = 투명망토처럼 보이지는 않지만 자신의 위치 선택
+                       프로필 사진을 선택했을 때 사진이 보이기 위해서는 자바스크립트로 설정
+                    */
+#user-profile {
+    display:none; /* 프로필 이미지 선택하는 창 숨기기 */
+}
+
+/* label[for="id속성명"] */
+label[for = "user-profile"] {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border : 1px solid #ccc;
+    border-radius : 5px;
+    cursor:pointer;
+}
