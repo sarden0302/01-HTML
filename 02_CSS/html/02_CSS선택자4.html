@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자4</title>
+</head>
+<body>
+    <h1>부모와 자식 선택자</h1>
+    <h2>일반 구조(위치) 선택자</h2>
+    <!--
+        형제 관계가 있는 요소 중에서 특정 요소만을 선택하는 선택자
+        ※ 위치를 기준으로 구분
+
+        A:first-child          -> 형제들 중 첫 번째가 A가 맞다면 선택 
+        A:last-child           -> 형제들 중 마지막이 A가 맞다면 선택 
+        A:nth-child(n = 숫자값) -> 형제들 중 n번째가 A가 맞다면 선택 
+        A:nth-last-child       -> 형제들 중 뒤에서부터 n번째가 A가 맞다면
+    -->
+    <style>
+        /****** 일반 구조 선택자 ******/
+        /* A:first-child */
+        /* 형제들 중 첫 번째가 A가 맞다면 선택 */
+        .test1 > p:first-child {
+            background-color: red;
+            color : white;
+        }
+
+        /* div class="test1에서 마지막이 pre태그이기 때문에 적용 x */
+        .test1 > p:last-child {
+            background-color: green;
+       
+        }
+        /* 마지막이 pre이가 맞기 때문에 적용 */
+        .test1 > pre:last-child {
+            background-color: green;
+        }
+        
+        /* 태그명:nth-child(숫자 또는 수열) */
+        .test1 > p:nth-child(2n) {
+            padding : 20px;
+            border-radius : 10px;
+            background-color: lightblue;
+        }
+
+        .test1 > p:nth-child(2n+1) {
+            padding : 10px;
+            font-weight : bold;
+            border-radius: 5px;
+            background-color: lightsalmon;
+        }
+
+        /* 만약에 동일한 규칭의 스타일이 추가될 경우 
+           자동으로 css를 적용해주기 위해 설정하는 방법 */
+        .test1 > p:nth-child(2n-1) {
+            background-color: yellow;
+            padding : 10px;
+        }
+    </style>
+    <div class="test1">
+        <p>테스트1</p>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+        <pre>테스트6 (pre)</pre>
+        <p>pre 밑에오는 테스트 7 p 태그</p>
+        <p>pre 밑에오는 테스트 8 p 태그</p>
+        <p>pre 밑에오는 테스트 9 p 태그</p>
+        <p>pre 밑에오는 테스트 10 p 태그</p>
+    </div>
+</body>
+</html>

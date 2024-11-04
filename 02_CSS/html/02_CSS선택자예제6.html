@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul li 스타일 적용하기</title>
+    <style>
+        ul {
+            display: flex;
+        
+            width : 100%;
+            height : 100%;
+            list-style-type: none;
+            flex-wrap : wrap;
+        }
+
+        ul li {
+            justify-content: space-around;
+            align-items: baseline;
+            text-align: center;
+            width: 100px;
+            height : 20px;
+            font-size: 20px;
+            padding : 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        ul li:nth-child(2n + 1) {
+            background-color: #f9f9f9;
+        }
+
+        ul li:nth-child(2n) {
+            background-color: #e0e0e0;
+        }
+
+        ul li:nth-child(3n) {
+            color : red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>ul li 스타일 적용하기</h1>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+        <li>항목 5</li>
+        <li>항목 6</li>
+        <li>항목 7</li>
+        <li>항목 8</li>
+        <li>항목 9</li>
+        <li>항목 10</li>
+        <li>항목 11</li>
+        <li>항목 12</li>
+        <li>항목 13</li>
+    </ul>
+    <hr>
+    <style>
+        /* 4번째 이후 문단에만 스타일 적용 */
+        /* +n ~ -n */
+        p:nth-child(n+1):nth-child(-n+3) {
+            font-weight : bold;
+            color : red;
+        }
+
+        p:nth-child(n + 4) {
+            color : blue;
+
+        }
+
+        /* 구조 선택자 우선순위 */
+        .pClass {
+            color : black;
+        }
+
+        #pId {
+            color : black;
+        }
+    
+    </style>
+    <h1>선착순 3명에게는 경품을 ~!</h1>
+    <div>
+        <p>김말숙</p>
+        <p>홍길동</p>
+        <p>박길자</p>
+        <p>오명식</p>
+        <p class="pClass" id="pId" >안정태</p>
+        <p>박규순</p>
+        <p>오영실</p>
+        <p>이길명</p>
+        <p>하짐자</p>
+        <p>고명진</p>
+    </div>
+</body>
+</html>

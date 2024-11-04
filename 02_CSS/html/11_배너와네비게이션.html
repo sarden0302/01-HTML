@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배너 및 네비게이션</title>
+    <style>
+        /*
+            보통 웹 사이트를 만들 때
+            body에 혹시 모를 여벽이 있을 수 있으니
+            margin : 0; 주고 시작
+            div 생성 시 생기는 여백 없앰
+        */
+        body {
+            margin : 0;
+        }
+        .banner {
+            background-color: yellowgreen;
+            color : white;
+            padding : 60px 0;
+            text-align: center;
+            font-size : 40px;
+            font-weight : bold;
+        }
+
+        /* ul은 기본적으로 위 아래에 공간 여백이 존재 
+            카테고리나 네비게이션 설정해줄 때 기본의 ul
+            태그에 작성된 공간이나 여백 없애줌
+            margin : 0; padding : 0; 덮어씌워 없애줌
+        */
+        .nav {
+            margin : 0;
+            padding : 0;
+            list-style: none; /* = list-style:none */
+            display: flex;
+            background-color: #333;
+            justify-content: space-around;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /*
+            a 태그는 inline 이기 때문에
+            패딩이 동작을 하지 않음
+            display: block 사용
+        */
+        .nav a {
+            display:block;
+            color :white;
+            padding : 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition : background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #5d4037;
+        }
+
+        /* 블로그 섹션 스타일 */
+        .blog {
+            width : 800px;
+            margin : 50px auto;
+            padding : 20px;
+            box-shadow : 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            background-color: #f9f9f9;
+            margin-bottom : 20px;
+            padding : 20px;
+            border-radius: 8px;
+        }
+
+        .post h2, .post h3 {
+            font-size : 24px;
+            margin-bottom: 10px;
+
+        }
+
+        .post h2 {
+            color : yellowgreen;
+        }
+
+        .post h3 {
+            color : lightgreen;
+        }
+
+        .post .emoji {
+            font-size : 50px;
+            margin-right : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 베너 -->
+     <div class="banner"> 
+        웹 사이트에 오신 것을 환영합니다.
+    </div>
+    <!-- 네비게이션 -->
+    <ul class="nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">연락하기</a></li>
+    </ul>
+    <!--
+        log  = 컴퓨터 문제를 기록하다
+        blog = (we)b log 
+        vlog = v(ideo) log
+    -->
+    <!-- blog section -->
+
+    <div class="blog">
+        <div class="post">
+            <h2>첫 번째 블로그 포스트</h2>
+            <p>안녕하세요. 블로그를 오픈했습니다. 많은 관심 부탁드려요.</p>
+        </div>
+
+        <div class="post">
+            <h2><span class="emoji">&#x1F36A;</span>쿠키 만들기 포스팅!</h2>
+            <p>밀가루에 우유와 계란을 넣고 반죽을 한다.</p>
+            <p>설탕과 초콜렛칩을 넣는다</p>
+            <p>오븐에서 20분 구워준다.</p>
+        </div>
+
+        <div class="post">
+            <h3>개발 공부하기 : 코딩 HTML 편</h3>
+            <p>Doctype 은 document type의 줄임말이다.</p>
+            <p>문서 타입의 html로 html5 설정을 해주기 위해 ! 를 넣는다.</p>
+
+        </div>
+
+    </div>
+</body>
+</html>
