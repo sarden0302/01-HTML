@@ -1,0 +1,33 @@
+body {
+    background-color : #f9f9f9;
+    margin : 0px;
+    color : #333;
+    padding : 30px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padiing : 20px;
+    border : 1px solid #ddd;
+    border-radius: 8px;
+    width : 500px;
+}
+
+label {
+    width : 70%;
+    font-size : 20px;
+    display : block;
+}
+
+input {
+    width : 70%;
+    font-size : 20px;
+}
+
+button {
+    background-color: lightblue;
+    border : none;
+    padding : 10px 20px;
+    border-radius : 5px;
+    font-size : 20px;
+}

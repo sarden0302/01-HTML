@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let start = prompt("9 이하의 숫자를 입력하세요");
+        if (parseInt(start) != null) {
+            (parseInt(start) > 9) ? alert("잘못입력하셨스니다") : alert("실행가능");
+        }
+
+        document.write("<div>");
+        for (let i = parseInt(start); i < 10; i++) {
+            document.write("<h3>" + i + "단</h3>");
+            for (let j = 1; j < 10; j++) {
+                document.write(i + "X" + j + " = " + i * j + "<br>"); 
+            }
+            document.write("</div>")
+        }
+    </script>
+</body>
+</html>

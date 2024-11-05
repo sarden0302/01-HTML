@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자(비교)</title>
+    <link rel="stylesheet" href="../css/03_연산자(비교).css">
+</head>
+<body>
+    <h1>비교 연산자</h1>
+    <!-- (==, !=, >, <, >=, <=)
+        - 좌변과 우변을 
+          같다, 같지않다, 크다, 작다, 크거나 같다, 작거나 같다
+
+        - 2개 이상의 기호를 사용할 떄 등호(=)는 무조건 오른쪽에 작성
+    -->
+    <hr>
+    <h3>입력된 두 수가 같은지 확인</h3>
+    <div>
+        <label>1번 숫자 : </label>
+        <input type = "text" id="number1">
+        <label>2번 숫자 : </label>
+        <input type = "text" id="number2">
+
+        <button onclick="비교하기1()">비교버튼</button>
+        <span id="result1"></span>
+    </div>
+    <hr>
+    <h3>input 3 에 입력한 수가 input4 에 입력한 수보다 큰지 확인</h3>
+    <div>
+        <label>3번 숫자 : </label>
+        <input type = "text" id="input3">
+        <label>4번 숫자 : </label>
+        <input type = "text" id="input4">
+
+        <button onclick="비교하기2()">비교버튼</button>
+        <span id="result2"></span>
+    </div>
+    <script src="../js/03_연산자(비교).js"></script>
+</body>
+</html>
