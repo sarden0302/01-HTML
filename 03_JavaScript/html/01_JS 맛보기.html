@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 맛보기</title>
+</head>
+<body>
+    <h1>JavaScript 기능을 사용해서 배경색 변경하기</h1>
+    <script>
+        //js 설정시 기능명을 설정하고 script 안에 작성
+        //alert : 경고, 알리다 (JS : 알림창)
+        //자바스크립트는 alert("")에 '' or "" 상관 없음
+
+        function 기능이름() {
+            alert("기능이 생성된 버튼을 클릭하셨습니다.");
+        }
+    </script>
+    <h3>html 내 script 작성</h3>
+    <button onclick="기능이름()">기능이 생성된 버튼 클릭하기</button>
+    <h3>인코딩 방식(비선호)</h3>
+    <!-- "alert('')" 형식-->
+    <button onclick="alert('버튼 클릭됌')">버튼 클릭하기</button>
+    <h3>js 파일 생성</h3>
+    <script src="../js/01_맛보기.js"></script>
+    <button onclick="버튼클릭()">버튼클릭</button>   
+</body>
+</html>
