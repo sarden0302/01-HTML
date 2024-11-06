@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>논리 연산자 (&&, ||, !)</title>
+    <link rel="stylesheet" href="../css/03_연산자_논리.css">
+    
 </head>
 <body>
-    
+    <h1>논리 연산자 (&&, ||, !)</h1>
+    <!--
+        AND 연산자 (A && B)
+        - A, B 모두 true일 경우 true 반환
+
+        OR 연산자 (A || B)
+        - A, B 중 true가 하나라도 존재할 때 true;
+    -->
+    <h3>로그인 하기</h3>
+    <div>
+        ID : <input type="text" id="inputId"> <br>
+        PW : <input type="password" id="inputPw"> <br>
+        <button onclick="login()">로그인</button>
+    </div>
+    <hr>
+    <h3>OR 연산자(||)</h3>
+    <div>
+        <h4>전화번호 입력</h4>
+        휴대폰 번호 : <input type="text" id="phone">
+        <br>
+        일반 전화번호 : <input type="text" id="tel">
+        <button onclick="checkNumber()">확인</button>
+        <!-- 경고 메세지 보이기 숨기기 -->
+        <p id= "msg">전화번호나 휴대폰 번호를 입력해주세요.</p>
+    </div>
+
+    <script src="../js/03_연산자3_논리.js"></script>
 </body>
 </html>
