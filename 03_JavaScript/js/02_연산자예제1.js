@@ -12,6 +12,14 @@ const result = document.getElementById("calcResult");
 /* 
     console.log(변수명) : javascript로 설정한 값을 확인하는 방법
 */
+
+/*
+    + 사용시 Number를 사용해야 문자열인지 숫자인지 구분 가능하다
+*/ 
+
+/*
+    인터프리터는 정확성을 중요시한다.
+*/ 
 console.log("개발자가 코드 확인하는 공간");
 
 
