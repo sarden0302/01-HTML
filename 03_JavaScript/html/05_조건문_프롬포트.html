@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt 프롬포트</title>
+    <style>
+        .container {
+            text-align: center;
+            padding : 20px 30px;
+            box-shadow : 0px 4px 8px rgba(0,0,0,0.1); 
+            border-radius: 10px;
+            width : 300px;
+        }
+
+        h3 {
+            color :#00796b;
+        }
+
+        button {
+            padding : 10px 20px;
+            font-size : 20px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top : 20px;
+            font-size : 20px;
+            color : #333;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>프롬포트</h1>
+    <!--
+        prompt(내용) : 문자열을 작성할 수 있는 알림창
+        - 확인 버튼 클릭 시 : 입력한 값 반환
+        - 취소 버튼 클릭 시 : null 값 반환
+    -->
+    <div class="container">
+        <h3>닉네임 입력하기</h3>
+        <button onclick="enterNick()">입장하기 </button>
+        <p id="output"></p>
+    </div>
+    <script>
+        function enterNick() {
+            // 아무런 값이 없는 것 : null;
+            const nickname = prompt("닉네임을 입력하세요.");
+
+            if (nickname) {
+                document.getElementById("output").innerText = "환영합니다! " + nickname + "님";
+            } else {
+                enterNick();
+            }
+        }
+    </script>
+</body>
+</html>
