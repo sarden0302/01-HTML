@@ -27,7 +27,7 @@ const in3 = document.getElementById("input3");
 const in4 = document.getElementById("input4");
 const r2 = document.getElementById("result2");
 
-function 비교하기2() {w
+function 비교하기2() {
     r2.innerText = (in3.value > in4.value) ? "좌측 숫자 값이 더 큽니다" : "우측 값이 더 크거나 같습니다";
     r2.style.color = (in3.value > in4.value) ? "yellowgreen" : "lightblue";
 }

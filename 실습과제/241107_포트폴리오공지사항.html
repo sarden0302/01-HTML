@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 공지사항</title>
+    <link rel="stylesheet" href="241107_포트폴리오공지사항.css">
+</head>
+<body>
+    <div class="container">
+        <h1>포트폴리오 공지사항</h1>
+        <p>※ 아래는 포트폴리오 공지사항 작성 양식입니다. 제목과 내용을 입력 후 작성하기 버튼을 눌러주세요.</p>
+        <form>
+            <label for="title">제목:</label>
+            <input type="text" id ="title" placeholder="제목을 입력하세요.">
+            <label for="content">내용:</label>
+            <textarea row="4" cols="20" maxlength="100" placeholder="내용을 입력해주세요." id="content"></textarea>
+            <label for="uploadingFile">첨부파일:</label>
+            <input type="file" name="파일 선택" id="uploadingFile">
+            <button>작성하기</button>
+        </form>
+    </div>
+    <div class="table-container">
+        <h1>공지사항 목록</h1>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>공지사항 제목 9</td>
+                    <td>user01</td>
+                    <td>2021-03-29</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>공지사항 제목 6</td>
+                    <td>answ445</td>
+                    <td>2021-03-12</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>공지사항 제목 5</td>
+                    <td>testg12</td>
+                    <td>2021-01-07</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>공지사항 제목 2</td>
+                    <td>palwe3</td>
+                    <td>2020-05-02</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>공지사항 제목 1</td>
+                    <td>xml23</td>
+                    <td>2020-12-24</td>
+                    <td>124</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+<footer>
+    <p class="center">전체 공지사항 개수: 5개</p>
+</footer>
+</html>

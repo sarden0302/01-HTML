@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic {
+            width : 300px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="../02_CSS/image/flower1.jpg" data-src="../02_CSS/image/ghost.jpg" class="pic"></li>
+            <li><img src="../02_CSS/image/flower2.jpg" data-src="../02_CSS/image/halloween-banner.png" class="pic"></li>
+            <li><img src="../02_CSS/image/flower3.jpg" data-src="../02_CSS/image/pumpkin.jpg" class="pic"></li>
+            <li><img src="../02_CSS/image/flower4.jpg" data-src="../02_CSS/image/skull.jpg" class="pic"></li>
+            <li><img src="../02_CSS/image/flower5.jpg" data-src="../02_CSS/image/web.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="../02_CSS/image/flower1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+        var pics = document.getElementByClassName("pic");
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightboxImage");
+
+        for (i = 0; i < pics.length; i++) {
+            pics[i].addEventListener("click", showLightbox);
+        }
+        function shwLightbox() {
+            var bigLocation = this.getAttribute("data-src");
+            lightboxImage.setAttribute("src", bigLocation);
+            lightbox.style.display = "block";
+        }
+
+        lightbox.onclick = function() {
+            lightbox.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>
