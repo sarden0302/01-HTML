@@ -1,0 +1,42 @@
+body {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+    background-color: #f5f5f5;
+}
+
+.season-container {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.season-container ul {
+    list-style-type: none;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.season-container ul li {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    width : 50px;
+    height : 30px;
+    border-radius: 8px;
+}
+.season-button {
+    display : flex;
+    justify-content: center;
+}
+
+.season-container button {
+    text-align: center;
+    width : 150px;
+    height: 80px;
+    border : none;
+    border-radius: 8px;
+    margin-bottom : 8px;
+}
