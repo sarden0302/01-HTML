@@ -31,3 +31,53 @@ function check4() {
 
     alert("최종으로 출력된 수 : " + (number - 1));
 }
+
+function while1() {
+    let num = 1;
+    while (num <= 5) {
+
+        num++;
+    }
+    console.log(num);
+}
+
+ function while2() {
+    let abc = 0;
+    let start = 1;
+    while (start <= 10) {
+        abc += start;
+        console.log("start : " + start + "\n" + "abc : " + abc);
+        start++;
+    }
+    console.log("final abc = " + abc);
+ }
+
+ function while3() {
+    let abc = 1;
+    let start = 1;
+    while (start <= 10) {
+        start++;
+        abc += start;
+        console.log("start : " + start + "\n" + "abc : " + abc);
+        if (start == 5) break;
+    }
+    console.log("final abc = " + abc);
+ }
+
+ // while4 라는 지역변수
+ function while4() {
+    let xyz = 0;
+    while (xyz <= 20) {
+        xyz++;
+        console.log(xyz);
+    }
+ }
+
+ function while5() {
+    let start = 5;
+    while (start <= 20) {
+        console.log(start);
+        if (start == 15) break;
+        start++;
+    }
+ }

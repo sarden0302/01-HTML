@@ -1,0 +1,44 @@
+.account {
+    width : 500px;
+    padding : 20px;
+    box-shadow : 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.row {
+    display : flex;
+    margin-bottom: 20px;
+    justify-content: space-between; 
+
+}
+
+h1 {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size : 30px;
+}
+
+input {
+    border : none;
+    border-bottom : 1px solid #ddd;
+    font-size : 20px;
+    padding : 15px;
+}
+
+button {
+    padding : 10px 20px;
+    border : none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.deposit:hover {
+    background-color: yellowgreen;
+    color : white;
+}
+
+.withdraw:hover {
+    background-color: orangered;
+    color : white;
+}

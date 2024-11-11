@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입출금 사이트</title>
+    <style>
+        .account {
+            width : 500px;
+            padding : 20px;
+            box-shadow : 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size : 30px;
+        }
+
+        input {
+            border : 1px solid #ddd;
+            font-size : 20px;
+            border-radius: 10px;
+            padding : 15px;
+        }
+
+        button {
+            padding : 10px 20px;
+            border : none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .withdraw:hover {
+            background-color: yellowgreen;
+            color : white;
+        }
+
+        .deposit:hover {
+            background-color: orangered;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <div class ="account">
+        <div class = "row">
+            <h1>잔액 : <span id="output"></span>원</h1>
+        </div>
+        <div class ="row">
+            <label for="amount">금액</label>
+            <input type="number" id="amount">
+            <span>원</span>
+        </div>
+
+        <div class="row">
+            <button class="withdraw" onclick="withdraw()">출금</button>
+            <button class="deposit" onclick="deposit()">입금</button>
+        </div>
+    </div>
+    <script src="../js/06_조건문예제6.js"></script>
+</body>
+</html>
