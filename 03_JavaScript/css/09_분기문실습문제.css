@@ -1,0 +1,16 @@
+button {
+    border : none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding : 10px 20px;
+    margin : 10px;
+}
+
+button:hover {
+    background-color: aliceblue;
+}
+
+#totalPrice {
+    margin-top : 20px;
+    font-size : 20px;
+}

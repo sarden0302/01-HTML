@@ -125,4 +125,65 @@ class AVLTree {
 
         return childNode;
     }
+
+    rotation(targetNode, data) {
+        let balanceFactor = this.getBalanceFactor(targetNode); 
+        let isRootNode = false;
+        
+        if (targetNode == this.root) {
+            isRootNode = true;
+        }
+
+        if (balanceFactor < -1 && data > targetNode.getRightSubTree().getData()) { //LLR
+            targetNode = this.rotateLeft(targetNode);
+        } else if (balanceFactor > 1 && data < targetNode.getLeftSubTree().getData()) { //RRR
+            targetNode = this.rotateRight(targetNode);
+        } else if (balanceFactor > 1 && data > targetNode.getLeftSubTree().getData()) { //LRR
+            targetNode.setLeftSubTree(this.rotateLeft(targetNode.getLeftSubTree()));
+            targetNode = this.rotateRight(targetNode);
+        } else if (balanceFactor < -1 && data < targetNode.getRightSubTree().getData()) { //RLR
+            targetNode.setRightSubTree(this.rotateRight(targetNode.getRightSubTree()));
+            targetNode = this.rotateLeft(targetNode);
+        }
+
+        if (isRootNode) { //루트노드가 변경되었을 시 실행
+            this.root = targetNode;
+        }
+        
+        return targetNode;
+    }
+
+    getUnBalanceNode(targetRootNode, unBalanceNode = null) {
+        if (targetRootNode.getLeftSubTree() == null && targetRootNode.getRightSubTree() == null) {
+            unBalanceNode = targetRootNode;
+            return unBalanceNode;
+        }
+
+        let balanceFactor = this.getBalanceFactor(targetRootNode);
+        if (balanceFactor > 0) { //왼쪽이 높다
+            unBalanceNode = this.getUnBalanceNode(targetRootNode.getLeftSubTree(), unBalanceNode);
+        } else if (balanceFactor < 0) {
+            unBalanceNode = this.getUnBalanceNode(targetRootNode.getRightSubTree(), unBalanceNode);
+        } else {
+            unBalanceNode = targetRootNode.getRightSubTree();
+        }
+
+        return unBalanceNode;
+    }
+
+    insert(targetRootNode, data) {
+        if (targetRootNode == null) {
+            targetRootNode = new BinaryTree(data);
+        }
+
+        if (this.root == null) {
+            this.root = targetRootNode;
+        } else if (targetRootNode.getData() == data) {
+            return targetRootNode;
+        } else if (targetRootNode.getData() > data) {
+            targetRootNode.setLeftSubTree(this.insert(targetRootNode.getLeftSubTree(), data));
+        } else {
+            targetRootNode.setRightSubTree(this.insert(targetRootNode.getRightSubTree(), data));
+        }
+    }
 }
