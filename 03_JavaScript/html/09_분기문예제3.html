@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>버튼을 활용한 음료 주문하기</title>
     <style>
+        body {
+            display : flex;
+        }
+
+        .button-container {
+            display : flex;
+        }
+
         button {
             border : none;
             border-radius: 10px;
@@ -19,7 +27,7 @@
 </head>
 <body>
     <h1>음료 주문하기</h1>
-    <div>
+    <div class ="button-container">
         <button onclick="add('1')">아메리카노 (&#8361; 3000원)</button>
         <button onclick="add('2')">카페라떼 (&#8361; 5500원)</button>
         <button onclick="add('3')">디카페인 아메리카노 (&#8361; 8000원)</button>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분기문 파라미터 매개변수 활용하기</title>
+    <style>
+        h1 {
+           text-align: center;
+           
+        }
+
+        div {
+            display : flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom : 50px;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            font-size : 20px;
+            padding : 10px 20px;
+        }
+
+        button:hover {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>버튼을 활용한 과일 주문하기</h1>
+    <div>
+        <button onclick="선택('apple')">사과 (&#8361; 2000)</button>
+        <button onclick="선택('grape')">포도 (&#8361; 5000)</button>
+        <button onclick="선택('kiwi')">키위 (&#8361; 3000)</button>
+    </div>
+    <h2 id="price"></h2>
+    <h1>과일 주문하기</h1>
+    <div>
+        <button onclick="totalPrice('apple')">사과 (&#8361; 2000)</button>
+        <button onclick="totalPrice('grape')">포도 (&#8361; 5000)</button>
+        <button onclick="totalPrice('kiwi')">키위 (&#8361; 3000)</button>
+    </div>
+    <h2 id="total_price"></h2>
+    <script src="../js/09_분기문예제4.js"></script>
+</body>
+</html>
