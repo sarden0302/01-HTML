@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name 속성으로 요소 접근하기</title>
+    <link rel="stylesheet" href="../css/13_요소접근_이름1.css">
+</head>
+<body>
+    <h1>name 으로 요소 접근하기</h1>
+    <small>name 속성은 input 또는 input 관련 태그만 기본 속성으로 가지고 있다.</small>
+    <table>
+        <tr>
+            <!-- <태그>요소값<태그>로 요소 값을 가져오는 경우는 innerText
+                 input 태그의 요소 값을 가져오는 경우는 value="요소값"으로 가져온다.  
+                설정 안할 시 "on"으로 초기화    
+             -->
+            <td>
+                <input type="checkbox" name="취미" id="game" value="게임">
+                <label for="game">게임</label>
+            </td>
+            <td>
+                <input type="checkbox" name="취미" id="music" value="음악감상">
+                <label for="music">음악감상</label>
+            </td>
+            <td>
+                <input type="checkbox" name="취미" id="tv" value = "티비시청">
+                <label for="tv">TV 시청</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="취미" id="book" value="독서">
+                <label for="book">독서</label>
+            </td>
+            <td>
+                <input type="checkbox" name="취미" id="coding" value="코딩">
+                <label for="coding">코딩</label>
+            </td>
+            <td>
+                <!-- value 값을 지정하지 않았을 때 
+                    checkbox radio  = on // 기본적으로 체크 되었음을 표시하는 용도로 
+                                            초기화. 사용할 수 있는 상태를 나타냄
+                    text number ... = ""
+                -->
+                <input type="checkbox" name="취미" id="cooking" value="요리">
+                <label for="cooking">요리</label>
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <button onclick="nameBtn()">선택된 취미만 출력하기</button>
+    <script src = "../js/13_요소접근_이름1.js"></script>
+</body>
+</html>

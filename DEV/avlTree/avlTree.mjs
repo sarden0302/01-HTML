@@ -172,6 +172,7 @@ class AVLTree {
     }
 
     insert(targetRootNode, data) {
+        //비어있을 때
         if (targetRootNode == null) {
             targetRootNode = new BinaryTree(data);
         }
@@ -185,5 +186,32 @@ class AVLTree {
         } else {
             targetRootNode.setRightSubTree(this.insert(targetRootNode.getRightSubTree(), data));
         }
+
+        this.updateHeight(targetRootNode);
+        targetRootNode = this.rotation(targetRootNode, data);
+
+        return targetRootNode;
+    }
+
+    remove(targetRootNode, data, parentNode = null) {
+        if (targetRootNode.getData() > data && targetRootNode.getLeftSubTree() != null) {
+            targetRootNode.setLeftSubTree(this.remove(targetRootNode.getLeftSubTree(), data, targetRootNode));
+        } else if (targetRootNode.getData() < data && targetRootNode.getRightSubTree() != null) {
+            targetRootNode.setRightSubTree(this.remove(targetRootNode.getRightSubTree(), data, targetRootNode));
+        } else if (targetRootNode.getData() == data) {
+            targetRootNode = this.removeHelper(targetRootNode, data, parentNode);
+
+            if (parentNode == null && targetRootNode != null) {
+                let unBalanceNode = this.updateHeight(targetRootNode);
+                targetRootNode = this.rotation(targetRootNode, unBalanceNode.getData());
+            }
+
+            return targetRootNode;
+        }
+
+        this.updateHeight(targetRootNode);
+        let unBalanceNode = this.getUnBalanceNode(targetRootNode);
+        targetRootNode = this.rotation(targetRootNode, unBalanceNode.getData());
+        return targetRootNode;
     }
 }

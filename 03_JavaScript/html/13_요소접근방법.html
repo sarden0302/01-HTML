@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 접근 방법</title>
+</head>
+<body>
+    <h1>DOM(Document Object Model)</h1>
+    <!-- 
+        웹 문서 (HTML)의 모든 요소를 객체 형식으로 표현한 것
+        (HTML 요소 == JS에서 객체라고 부름)
+        ex) <h1>   : font-size : 35px;
+                     display   : block;
+
+        -> 문서 내 특정 요소 접근 가능
+            + 요소(객체)에 속성 값을 세팅 또는 얻어올 수 있음
+                   客體 
+                    * 客 : 어떤 사람(손님 = 우리가 범잡을 수 없는) 객
+                    * 體 : 몸 체
+
+            document.getElementById("아이디값");
+            document = html 코드(문서)
+            .getElementById = 요소들 중에서 Id값을 가져오겠다/
+    -->
+
+    <h1>DOM을 이용한 요소 접근하기</h1>
+    <!--
+        1. id로 접근하기 : .getElementById("id속성값");
+
+        * 참고로 id빼고 뒤에 Name이 붙는다
+        2. class로 접근  : .getElementsByClassName("class속성값");
+                         -> 단체로 클래스명이 적힌 모든 요소를 가져온다.
+        3. name          : .getElementsByName("name속성값");
+                         -> name이 일치하는 모든 요소를 얻어와 배열(NodeList)
+                            형태로 변환
+        4. tag           : .getElementsByTagName("태그명");
+                         -> 태그가 일치하는 모든 요소를 얻어와 배열 형태로 변환
+        5. CSS로 선택자 접근
+            1) document.querySelector("CSS 선택자");
+                -> 선택자가 선택한 요소 중 첫 번째 요소
+            2) document.querySelectorAll("CSS 선택자");
+                -> 선택한 요소 모두 배열(NodeList) 형태로 변환
+
+        *** NodeList, 유사배열이란?
+            ex) map,filter와 같은 배열 기능을 사용할 수 없음
+                대신 forEach문을 사용해서 접근 가능
+    -->
+</body>
+</html>

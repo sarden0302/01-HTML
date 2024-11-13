@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 중에서 body 태그만 확인하기</title>
+</head>
+<body>
+    <h1>body 태그 배경색 변경하기</h1>
+    <button onclick="bdBtn()">Body Button</button>
+
+    <script>
+        function bdBtn() {
+            // getElementsByTagName("body") = [body, ...];
+            // 따라서 getElementsByTagName("body")[0] 로 지정해줘야한다.
+            const bd = document.getElementsByTagName("body")[0];
+            bd.style.backgroundColor = "lightblue";
+
+            // body와 같은 태그는 TagName을 사용하지 않고 태그명으로 변경 가능
+            document.body.style.backgroundColor = "orange";
+        }
+
+    </script>
+</body>
+</html>
