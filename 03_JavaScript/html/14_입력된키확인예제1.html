@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력된 키 확인하기</title>
+    <style rel="stylesheet" href="../css/14_입력키확인예제1.css"></style>
+</head>
+<body>
+    <h2>키 입력 이벤트 예제</h2>
+    <p>아래 입력 창에서 키를 누르거나 떼보세요.</p>
+    <!--
+        event : 타이핑 하는 모든 input 값
+        JS 함수 내에서 event.key === "Enter" 식으로 
+        요구된 키 값이 들어오는지 확인할 수 있다.
+    -->
+    <input type="text" id="inputBox" placeholder="키를 눌러보세요." onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+
+
+    <script src="../js/14_입력된키확인예제1.js"></script>
+</body>
+</html>

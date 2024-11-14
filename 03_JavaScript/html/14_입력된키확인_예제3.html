@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+
+    <script>
+      /* body 전체에서 onkeyup을 받고 실행하기 */
+      function handleKeyDown(event) {
+        const keys = document.querySelectorAll(".key");
+        switch (event.key) {
+          case "q":
+          case "Q":
+            idx = 0;
+            break;
+          case "w":
+          case "W":
+            idx = 1;
+            break;
+          case "e":
+          case "E":
+            idx = 2;
+            break;
+          case "r":
+          case "R":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "green";
+
+        
+      }
+
+      function handleKeyUp(event) {
+        const keys = document.querySelectorAll(".key");
+        let idx;
+        switch (event.key) {
+          case "q":
+          case "Q":
+            idx = 0;
+            break;
+          case "w":
+          case "W":
+            idx = 1;
+            break;
+          case "e":
+          case "E":
+            idx = 2;
+            break;
+          case "r":
+          case "R":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+
+        //keys[idx].style.backgroundColor = "white";
+
+        //function 예시가 몇 초후에 실행된다.
+        //구버젼
+        setTimeout(예시, 200, idx);
+        //신버젼 
+        setTimeout(() => {
+            keys[idx].style.backgroundColor = "white";
+        }, 200);
+      }
+    </script>
+  </body>
+</html>

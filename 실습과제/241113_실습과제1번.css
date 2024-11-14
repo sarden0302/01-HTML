@@ -1,0 +1,39 @@
+#title {
+    color: blue;
+    text-align: center;
+}
+
+.text {
+    color: black;
+    text-align: center;
+}
+
+.highlighted {
+    color: red;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+    color: blue;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: aliceblue;
+}
+
+.changing_color {
+  color :  green;
+}
+
+.changing_text {
+  color : red;
+  font-weight : bold;
+  list-style-type: circle;
+}

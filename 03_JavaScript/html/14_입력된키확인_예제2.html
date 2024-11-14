@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력된 키 확인 Enter</title>
+    <style rel="stylesheet" href="../css/14_입력키확인예제2.css"></style>
+</head>
+<body>
+    <h1>Enter 키를 입력했을 때 입력한 값 화면에 보여주기</h1>
+    <p>입력 창에서 Enter 키를 눌러보세요.</p>
+    <input type="text" id="inputBox" placeholder="Enter를 눌러보세요." onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+    
+    <div id="msg"></div>
+    <script src="../js/14_입력된키확인예제2.js"></script>    
+</body>
+</html>

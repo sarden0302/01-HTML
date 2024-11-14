@@ -2,6 +2,7 @@
     만약에 선택한 취미가 1개라도 있으면 선택한 취미명과 몇개 선택 되었는지 출력
 */
 
+
 function checkHobby() {
     const hobbies = document.getElementsByName("hobby");
     let count = 0;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="241113_실습과제1번.css">
+</head>
+<body>
+    <!-- 1. getElementById() 사용하기 -->
+    <h1 id="title">안녕하세요, 반가워요!</h1>
+    <button onclick="changingColor()">제목 색상 변경</button>
+
+    <hr />
+
+    <!-- 2. getElementsByClassName() 사용하기 -->
+    <h2 class="text">텍스트 1</h2>
+    <h2 class="text">텍스트 2</h2>
+    <h2 class="text">텍스트 3</h2>
+    <button onclick="changingText()">텍스트 강조</button>
+
+    <hr />
+
+    <!-- 3. getElementsByName(), getElementById() 사용하기 -->
+    <label>이름을 입력하세요:</label>
+    <input type="text" name="username" placeholder="이름">
+    <button onclick="typingName()">이름 표시</button>
+    <p>당신의 이름: <span id="nameOutput"></span></p>
+    <script src="241113_실습과제1번.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="241113_실습과제2.css">
+</head>
+<body>
+    <div id = "terms-form">
+        <h2>회원가입 약관 및 취미 선택</h2>
+        <input type="checkbox" name="consent-form" id ="service" required>
+        <label for="service">서비스 이용 약관 동의</label>
+        <br>
+        <input type="checkbox" name="consent-form" id ="privacy" required>
+        <label for="privacy">개인정보 수집 및 이용 동의</label>
+        <br>
+        <input type="checkbox" name="consent-form" id ="marketing" checked>
+        <label for="marketing">마케팅 정보 수신 동의 (선택)</label>
+        <div class="hobby-container">
+            <h3>취미 선택</h3>
+            <input type="checkbox" name="hobby" id ="reading" value="독서">
+            <label for="reading">독서</label>
+            <br>
+            <input type="checkbox" name="hobby" id ="exercising" value="운동">
+            <label for="exercising">운동</label>
+            <br>
+            <input type="checkbox" name="hobby" id ="cooking" value="요리">
+            <label for="cooking">요리</label>
+            <br>
+            <input type="checkbox" name="hobby" id ="traveling" value ="여행">
+            <label for="traveling">여행</label>      
+        </div>
+        <button onclick="checking()">확인하기</button>
+        <p><span id="result"></span></p>
+    </div>
+    <script src="241113_실습과제2.js"></script>
+</body>
+</html>

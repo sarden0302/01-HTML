@@ -1,0 +1,21 @@
+.container {
+    display : flex;
+    flex-direction: column;
+    margin-bottom : 10px;
+}
+
+label {
+    margin : 5px 0;
+}
+
+button {
+    margin : 10px;
+}
+
+/* +바로 뒤 혀제 요소 */
+/* input에서 특정 이름을 가진 속성에서 checked로 선택되어있는 스타일*/
+input[name="색상"]:checked + label {
+    background-color: yellow;
+    border: none;
+
+}
