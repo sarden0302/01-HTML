@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/15_정규표현식_회원가입.css">
+</head>
+<body>
+    <div class="container">
+        <h2>행복나라 회원가입</h2>
+        <div class="input-group">
+            <label for="user-id">아이디 : </label>
+            <input type ="text" id="user-id">
+            <label for="user-pw">비밀번호 : </label>
+            <input type ="password" id="user-pw">
+            <label for="user-repw">비밀번호 확인 : </label>
+            <input type ="password" id="user-repw">
+            <label for="user-name">이름 : </label>
+            <input type ="text" id="user-name">
+            <label>성별 : </label>
+            <input type ="radio" name="gender" id="man"><label for="man">남자</label>
+            <input type ="radio" name="gender" id="woman"><label for="woman">여자</label>
+        </div>
+        <button onclick="checking()">체크하기</button>
+        <p id="result"></p>
+    </div>
+    <script src="../js/15_정규표현식_회원가입.js"></script>
+</body>
+</html>

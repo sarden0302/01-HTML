@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이름 형식 검사</title>
+    <style>
+        .good {
+            color : green;
+        }
+
+        .bad {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <h1>이름 형식 검사</h1>
+    <p>이름을 입력하세요. (2~5자 한글)</p>
+    <input type="text" id="nameInput">
+    <button onclick="checkName()">확인</button>
+    <p id="result"></p>
+    <hr>
+    <h3>입력 받은 값이 휴대전화가 맞는지 확인</h3>
+    <!--
+        "-" 하이픈 기호 제외하고 핸드폰 번호가 10자리에서 11자리 이어야함
+    -->
+    <p>번호를 입력하세요. Hint! xxx-xxxx-xxxx</p>
+    <input type="text" id="InputPhone">
+    <button onclick="checkPhone()">확인</button>
+    <p id="phoneResult"></p>
+
+    <hr>
+    <h3>입력 받은 값이 휴대전화 번호가 맞는지 확인</h3>
+    <!-- 
+        "-" 하이픈 기호 제외하고 핸드폰 번호가 10~11자리 이어야 함
+        010-xxxx-xxx 중간 - 을 제거하는 방법
+
+        변수명.replace(변경할 문자, 변경될 문자)
+        변수명.includes("검색할 문자") 
+    -->
+    휴대폰 번호: <input type="text" id="mobilePhone">
+    <button onclick="checkMobile()">휴대폰 번호 확인</button>
+    <p id="mobileResult"></p>
+
+    <script src="../js/15_정규표현식예제1.js"></script>
+</body>
+</html>

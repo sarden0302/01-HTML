@@ -202,7 +202,8 @@ class AVLTree {
             targetRootNode = this.removeHelper(targetRootNode, data, parentNode);
 
             if (parentNode == null && targetRootNode != null) {
-                let unBalanceNode = this.updateHeight(targetRootNode);
+                this.updateHeight (targetRootNode);
+                let unBalanceNode = this.getUnBalanceNode(targetRootNode);
                 targetRootNode = this.rotation(targetRootNode, unBalanceNode.getData());
             }
 
@@ -214,4 +215,86 @@ class AVLTree {
         targetRootNode = this.rotation(targetRootNode, unBalanceNode.getData());
         return targetRootNode;
     }
+
+    removeHelper(deletingNode, data, parentNode) {
+        let fakeParentRootNode = new BinaryTree(0);
+        fakeParentRootNode.setRightSubTree(this.root);
+
+        if (parentNode == null) {
+            parentNode = fakeParentRootNode;
+        }
+
+        let deletingNodeChild = null;
+
+        if (deletingNode.getLeftSubTree() == null && deletingNode.getRightSubTree() == null) {
+            if (parentNode.getLeftSubTree() == deletingNode) {
+                parentNode.removeLeftSubTree();
+            } else {
+                parentNode.removeRightSubTree();   
+            }
+        } else if (deletingNode.getLeftSubTree() == null || deletingNode.getRightSubTree() == null) {
+
+            if(deletingNode.getLeftSubTree() != null) {
+                deletingNodeChild = deletingNode.getLeftSubTree();
+            } else {
+                deletingNodeChild = deletingNode.getRightSubTree();
+            }
+
+            if (parentNode.getLeftSubTree() == deletingNode) {
+                parentNode.setLeftSubTree(deletingNodeChild);
+            } else {
+                parentNode.setRightSubTree(deletingNodeChild);
+            }
+        } else {
+            let replacingNode = deletingNode.getLeftSubTree();
+            let replacingNodeParent = deletingNode;
+
+            while(replacingNode.getRightSubTree() != null) {
+                replacingNodeParent = replacingNode;
+                replacingNode = replacingNode.getRightSubTree();
+            }
+
+            let deletingNodeData = deletingNode.getData();
+            deletingNode.setData(replacingNode.getData());
+            if (replacingNodeParent.getLeftSubTree() == replacingNode) {
+                replacingNodeParent.setLeftSubTree(replacingtNode.getLeftSubTree());
+            } else {
+                replacingNodeParent.setRightSubTree(replacingNode.getLeftSubTree());
+            }
+
+            deletingNodeChild = deletingNode;
+
+        }
+
+        if (fakeParentRootNode.getRightSubTree() != this.root) {
+            this.root = fakeParentRootNode.getRightSubTree();
+        }
+
+        return deletingNodeChild; 
+    }
 }
+
+
+let avlTree = new AVLTree();
+console.log("========= insert =========");
+avlTree.insert(avlTree.root, 1);
+avlTree.insert(avlTree.root, 2);
+avlTree.insert(avlTree.root, 3);
+avlTree.insert(avlTree.root, 3);
+avlTree.insert(avlTree.root, 4);
+avlTree.insert(avlTree.root, 5);
+avlTree.insert(avlTree.root, 6);
+avlTree.insert(avlTree.root, 7);
+
+console.log(avlTree.root);
+avlTree.root.inOrderTraversal(avlTree.root);
+
+console.log("======== remove =========");
+avlTree.remove(avlTree.root, 2);
+avlTree.remove(avlTree.root, 3);
+avlTree.remove(avlTree.root, 1);
+console.log(avlTree.root);
+avlTree.root.inOrderTraversal(avlTree.root);
+
+console.log("======== search =========");
+console.log(avlTree.search(7));
