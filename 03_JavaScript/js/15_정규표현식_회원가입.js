@@ -17,8 +17,8 @@ function checking() {
         return;
     }
 
-    result.innerText = "수고하셨습니다. 좋은 하루 되세요 :)";
     result.className = "success-msg";
+    result.innerText = "수고하셨습니다. 좋은 하루 되세요 :)";
 }
 
 function checkingId(result) {

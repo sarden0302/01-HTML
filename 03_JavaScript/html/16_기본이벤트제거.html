@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>기본 이벤트 제거</title>
 </head>
 <body>
-    
+    <h1>기본 이벤트 제거</h1>
+    <!--
+        a 태그의 기본 이벤트 : 클릭시 href 속성에 작성된 url로 이동
+
+        form 태그의 기본 이벤트
+            : form 태그 내부의 submit 동작 발생시
+              action 속성에 작성된 url로 name value들 전달
+    -->
+
+    <!-- 방법1) e.preventDefault() 사용
+        e.preventDefault() 
+        e = event의 약자
+
+        html의 순수 기본 동작을 자바스크립트에서 이벤트의 기본 동작을 js에서 기본 동작을 막는 메서드
+    -->
+    <form action="결과.html">
+        이름 : <input type="text" id="id-name" name="name-name"><br>
+        나이 : <input type="text" id="id-age" name="name-age"><br>
+        이메일 : <input type="text" id="id-email" name="name-email"><br>
+        <button onclick="제출(event)">등록하기</button>
+        <!--event는 고정 -->
+    </form>
+
+    <script src="../js/16_기본이벤트제거.js"></script>
 </body>
 </html>
