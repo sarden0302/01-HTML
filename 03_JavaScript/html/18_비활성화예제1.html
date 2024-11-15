@@ -12,16 +12,6 @@
     <label><input type="checkbox" id="동의3" onclick="동의버튼()">약관 3 동의</label>
 
     <button id="signBtn" disabled>회원가입</button>
-    <script>
-        function 동의버튼() {
-            const a1 = document.getElementById("동의1").checked;
-            const a2 = document.getElementById("동의2").checked;
-            const a3 = document.getElementById("동의3").checked;
-
-            const ABC = a1 && a2 && a3;//a1~a3 모두 true일 때만 true;
-
-            document.getElementById("signBtn").disabled = !ABC;
-        }
-    </script>
+    <script src="../js/18_비활성화예제1.js"></script>
 </body>
 </html>

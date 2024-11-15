@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="../css/16_기본이벤트제거예제1.css">
 </head>
 <body>
-    <div class="container" onclick="checking()">
+    <div class="container">
         <h1>약관 동의</h1>
-        <input type="checkbox" name="agreement" id="agree1">약관 동의1
-        <input type="checkbox" name="agreement" id="agree2">약관 동의2
-        <input type="checkbox" name="agreement" id="agree3">약관 동의3
+        <label>
+            <input type="checkbox" name="agreement" id="agree1" onclick="checking()">약관 동의1
+        </label>
+        <label>
+            <input type="checkbox" name="agreement" id="agree2" onclick="checking()">약관 동의2
+        </label>
+        <label>
+            <input type="checkbox" name="agreement" id="agree3" onclick="checking()">약관 동의3
+        </label>
         <button disabled id="button">회원가입</button>
     </div>
-
+    <hr>
+    <!-- 방법2) 일반 버튼 클릭 시 form 태그 제출 막기 
+        19_이벤트.html에 작성된 이벤트 모델 방법 활용 
+    -->
+    <form action="결과.html">
+        <label>
+            입력 : <input type="text" id="inputTest">
+        </label>
+        <button type="button" id="btn">제출하기</button>
+    </form>
 
     <script src="../js/16_기본이벤트제거예제1.js"></script>
 </body>
