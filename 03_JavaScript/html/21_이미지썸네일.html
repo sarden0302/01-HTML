@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 미리보기</title>
+    <style>
+        body {
+            display : flex;
+            flex-direction : column;
+            align-items: center;
+            padding : 20px;
+        }
+
+        img {
+            width : 500px;
+            height : 500px;
+            display : none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        accept : 파일 형식 규정
+        - accept="image/*"" 모든 이미지 파일    
+          accept=".jpg"            // .jpg, .png, .gif
+        - audio                    // .mp3, .wav
+        - video                    // .mp4, .avi
+    -->
+    <input type="file" id="imgUpload" accept="image/*">
+    <img id="imgPreview">
+
+    <script>
+        const imgUp = document.getElementById("imgUpload");
+        imgUp.addEventListener('change', (event) => {
+            const file = event.target.files[0]; //file은 배열로 이루어져 있다.
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    document.getElementById("imgPreview").src = event.target.result;
+                    document.getElementById("imgPreview").style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
