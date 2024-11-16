@@ -1,0 +1,26 @@
+body {
+    margin : 0;
+    padding : 0;
+}
+.index2_container form {
+    display :flex;
+    justify-content: flex-start;
+}
+.index2_container form input[type="number"] {
+    margin : 0 10px;
+}
+.normal {
+    margin : 0 10px;
+    border : 1px solid #333;
+    width : 20vh;
+    height : 20px;
+}
+
+.cant {
+    margin : 0 10px;
+    border : 1px solid #333;
+    width : 20vh;
+    height : 20px;
+    color : white;
+    background-color: red;
+}

@@ -1,0 +1,38 @@
+body {
+    margin : 0;
+    padding : 0;
+}
+
+.hobby_container{
+    display : flex;
+    justify-content: flex-start;
+}
+
+.hobby_container .total {
+    justify-content: flex-start;
+    width : 200px;
+    font-weight: bold;
+}
+
+.hobby_container .others {
+    width : 50vh;
+}
+
+button {
+    margin-top : 15px;
+}
+
+.hide {
+    border: 1px solid red;
+    width : 100vh;
+    height : 70px;
+    display : none;
+}
+
+.show {
+    border: 1px solid red;
+    width : 100vh;
+    height : 70px;
+    display : block;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice1.css">
+</head>
+<body>
+    <h1>Practice 1</h1>
+    <fieldset>
+        <legend>취미</legend>
+        <form class="hobby_container">
+            <div class="total">
+                <label>
+                    <input type="checkbox" id="total" name="hobbies" value="전체선택">전체선택
+                </label>
+            </div>
+            <div class = "others">
+                <label>
+                    <input type="checkbox" name="hobbies" value="종합">종합
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="소설">소설
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="시/에세이">시/에세이
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="경제/경영">경제/경영
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="자기계발">자기계발
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="아동">아동
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="여행">여행
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="과학">과학
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="역사/문화">역사/문화
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="외국어">외국어
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="컴퓨터">컴퓨터
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="만화">만화
+                </label>
+            </div>
+        </form>
+    </fieldset>
+    <button onclick="index1Button()">카테고리 선택</button>
+    <div id="index1Result" class="hide"></div>
+    <script src="index1.js"></script>
+</body>
+</html>
