@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>회원가입</legend>
+            <form>
+                <label>아이디 :
+                    <input type="text" id="user_id">
+                    <p id="id_result"></p>
+                </label>
+                <label>비밀번호 : 
+                    <input type="password" id="user_pw">
+                </label>
+                <label>비밀번호 확인 :
+                    <input type="password" id="user_repw" onblur="checkingPw(event)">
+                    <p id="pw_result"></p>
+                </label>
+                <label>이름 :
+                    <input type="text" id="user_name">
+                </label>
+            </form>
+            <button onclick="index3_button()">회원가입</button>
+        </fieldset>
+
+    </div>
+    
+    <script src="index3.js"></script>
+</body>
+</html>

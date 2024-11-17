@@ -1,0 +1,32 @@
+body {
+    margin : 0;
+    padding : 0;
+}
+
+.container {
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container fieldset {
+    width : 100vh;
+}
+
+.container form label {
+    display : flex;
+    margin : 10px 0px;
+    padding : 5px 0px;
+}
+
+.container form label input {
+    width : 200px;
+    height : 20px;
+}
+
+.enabled {
+    color : green;
+}
+
+.unabled {
+    color : red;
+}

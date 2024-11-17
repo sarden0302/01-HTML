@@ -17,6 +17,17 @@ total.addEventListener('click', () => {
     return;
 });
 
+function checkingHobby() {
+    for (let i = 1; i < hobbies.length; i++) {
+        if (!hobbies[i].checked) {
+            total.checked = false;
+            return;
+        }
+    }
+    total.checked = true;
+    console.log("total.checked " + total.checked);
+}
+
 function index1Button() {
     if (total.checked) {
         let str = "";
