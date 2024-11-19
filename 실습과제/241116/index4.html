@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator_result {
+            display : flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Practice 2-2</h1>
+        <div class="calculator_result">
+        </div>
+        <button id="clear">C</button>
+        <button onclick="bs()">bs</button>
+        <button onclick="operating(value)" name="operator" value="%">%</button>
+        <button onclick="operating(value)" name="operator" value="/">/</button>
+        <br>
+        <button onclick="numberAdding(value)" name="number" value="7">7</button>
+        <button onclick="numberAdding(value)" name="number" value="8">8</button>
+        <button onclick="numberAdding(value)" name="number" value="9">9</button>
+        <button onclick="operating(value)" name="operator" value="*">X</button>
+        <br>
+        <button onclick="numberAdding(value)" name="number" value="4">4</button>
+        <button onclick="numberAdding(value)" name="number" value="5">5</button>
+        <button onclick="numberAdding(value)" name="number" value="6">6</button>
+        <button onclick="operating(value)" name="operator" value="-">-</button>
+        <br>
+        <button onclick="numberAdding(value)" name="number" value="1">1</button>
+        <button onclick="numberAdding(value)" name="number" value="2">2</button>
+        <button onclick="numberAdding(value)" name="number" value="3">3</button>
+        <button onclick="operating(value)" name="operator" value="+">+</button>
+        <br>
+        <button onclick="numberAdding(value)" name="number" value="0">0</button>
+        <button onclick="numberAdding(value)" name="number" value=".">.</button>
+        <button onclick="finalResult()" id="result">=</button>
+    </div>
+    <script src="index4.js"></script>
+</body>
+</html>
